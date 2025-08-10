@@ -1,44 +1,30 @@
-import os, argparse, random, glob
+# tools/gen_acdc_splits.py
+import os, glob, argparse
 
-def main(root, val_ratio=0.2, seed=42):
-    random.seed(seed)
-    train_dir = os.path.join(root, 'training')
-    test_dir  = os.path.join(root, 'testing')
-    split_dir = os.path.join(root, 'splits')
-    os.makedirs(split_dir, exist_ok=True)
+def list_bases(root_dir):
+    paths = sorted(glob.glob(os.path.join(root_dir, 'patient*', '*_frame*.nii.gz')))
+    # GT 있는 프레임만
+    paths = [p for p in paths if os.path.exists(p.replace('.nii.gz','_gt.nii.gz'))]
+    # 예: patient101/patient101_frame01  (확장자 제거)
+    return [os.path.relpath(p, start=root_dir)[:-7] for p in paths]
 
-    # 후보 이미지: *_frameXX.nii.gz (라벨은 *_gt.nii.gz)
-    train_imgs = sorted(glob.glob(os.path.join(train_dir, 'patient*', '*_frame*.nii.gz')))
-    test_imgs  = sorted(glob.glob(os.path.join(test_dir,  'patient*', '*_frame*.nii.gz')))
+def main(root):
+    tr_dir = os.path.join(root, 'training')
+    te_dir = os.path.join(root, 'testing')
+    os.makedirs(os.path.join(root, 'splits'), exist_ok=True)
 
-    # GT가 있는 프레임만 사용
-    train_imgs = [p for p in train_imgs if os.path.exists(p.replace('.nii.gz', '_gt.nii.gz'))]
-    test_imgs  = [p for p in test_imgs  if os.path.exists(p.replace('.nii.gz', '_gt.nii.gz'))]
+    train_bases = list_bases(tr_dir)
+    val_bases   = list_bases(te_dir)
 
-    # 상대경로로 변환 (img_dir='training', ann_dir='training' 기준)
-    rel_train = [os.path.relpath(p, start=train_dir) for p in train_imgs]
-    rel_test  = [os.path.relpath(p, start=test_dir)  for p in test_imgs]
+    with open(os.path.join(root, 'splits', 'train.txt'), 'w') as f:
+        f.write('\n'.join(train_bases) + '\n')
+    with open(os.path.join(root, 'splits', 'val.txt'), 'w') as f:
+        f.write('\n'.join(val_bases) + '\n')
 
-    # train을 다시 train/val로 나누고, test는 그대로 val로 써도 됨(선호에 따라)
-    random.shuffle(rel_train)
-    k = int(len(rel_train) * (1 - val_ratio))
-    tr, va = rel_train[:k], rel_train[k:]
-
-    # 테스트 슬라이스도 검증에 합치고 싶으면 아래 주석 해제
-    # va += [os.path.join('..','testing', p) for p in rel_test]
-
-    with open(os.path.join(split_dir, 'train.txt'), 'w') as f:
-        f.write('\n'.join([os.path.join('patient'+p.split('patient')[-1].split('/')[0], os.path.basename(p)) for p in tr]) + '\n')
-
-    with open(os.path.join(split_dir, 'val.txt'), 'w') as f:
-        f.write('\n'.join([os.path.join('patient'+p.split('patient')[-1].split('/')[0], os.path.basename(p)) for p in va]) + '\n')
-
-    print(f'Wrote {len(tr)} train and {len(va)} val items to {split_dir}')
+    print(f'train={len(train_bases)} from training/, val={len(val_bases)} from testing/')
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--root', default='data/ACDC', help='ACDC data root')
-    ap.add_argument('--val_ratio', type=float, default=0.2)
-    ap.add_argument('--seed', type=int, default=42)
+    ap.add_argument('--root', default='data/ACDC')
     args = ap.parse_args()
-    main(args.root, args.val_ratio, args.seed)
+    main(args.root)

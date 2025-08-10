@@ -1,7 +1,6 @@
-# mmseg/datasets/pipelines/load_nifti_annotation.py
+# segmentation/mmseg/datasets/pipelines/load_nifti_annotation.py
 import numpy as np
 import nibabel as nib
-from mmcv.utils import build_from_cfg
 from mmseg.datasets.builder import PIPELINES
 
 @PIPELINES.register_module()
@@ -20,59 +19,47 @@ class LoadNiftiImageFromFile:
         self.scale_to_uint8 = scale_to_uint8
 
     def __call__(self, results):
-        img_path = results['img_prefix'] + results['img_info']['filename'] \
-            if 'img_prefix' in results and results.get('img_prefix') else \
-            results['img_info']['filename']
-
+        img_path = (results.get('img_prefix') or '') + results['img_info']['filename'] \
+            if results.get('img_prefix') else results['img_info']['filename']
         nimg = nib.load(img_path)
         arr = np.asanyarray(nimg.get_fdata())  # float64
 
-        # squeeze to (H, W) if possible
+        # choose 2D slice
         if arr.ndim == 3:
-            # choose slice
             idx = self.slice_index if self.slice_index is not None else arr.shape[-1] // 2
             arr = arr[..., idx]
-        elif arr.ndim == 4:
-            # (H,W,D,C) -> take channel 0 then middle slice
+        elif arr.ndim == 4:  # (H,W,S,C) → C=0 then pick slice
             arr = arr[..., 0]
             idx = self.slice_index if self.slice_index is not None else arr.shape[-1] // 2
             arr = arr[..., idx]
-        elif arr.ndim == 2:
-            pass
-        else:
-            raise ValueError(f'Unexpected image shape {arr.shape} in {img_path}')
+        elif arr.ndim != 2:
+            raise ValueError(f'Unexpected image shape {arr.shape} for {img_path}')
 
-        # intensity processing
         if self.clip is not None:
             lo, hi = self.clip
             arr = np.clip(arr, lo, hi)
 
         if self.scale_to_uint8:
-            amin, amax = float(arr.min()), float(arr.max())
-            if amax > amin:
-                arr = (arr - amin) / (amax - amin) * 255.0
+            lo, hi = float(arr.min()), float(arr.max())
+            if hi > lo:
+                arr = (arr - lo) / (hi - lo) * 255.0
             else:
                 arr = np.zeros_like(arr)
             arr = arr.astype(np.uint8)
         else:
             arr = arr.astype(np.float32)
 
-        # to 3-channel by stacking (mmseg default pipelines expect 3ch often)
-        if arr.ndim == 2:
-            arr3 = np.stack([arr, arr, arr], axis=-1)  # (H,W,3)
-        else:
-            raise ValueError(f'Expected 2D after slice, got {arr.shape}')
+        img = np.stack([arr, arr, arr], axis=-1)  # (H,W,3)
 
         results['filename'] = img_path
         results['ori_filename'] = img_path
-        results['img'] = arr3
-        results['img_shape'] = arr3.shape
-        results['ori_shape'] = arr3.shape
-        results['pad_shape'] = arr3.shape
+        results['img'] = img
+        results['img_shape'] = img.shape
+        results['ori_shape'] = img.shape
+        results['pad_shape'] = img.shape
         results['scale_factor'] = 1.0
         results['img_fields'] = ['img']
         return results
-
 
 @PIPELINES.register_module()
 class LoadNiftiAnnotations:
@@ -88,30 +75,24 @@ class LoadNiftiAnnotations:
         self.slice_index = slice_index
 
     def __call__(self, results):
-        ann_path = results['seg_prefix'] + results['ann_info']['seg_map'] \
-            if 'seg_prefix' in results and results.get('seg_prefix') else \
-            results['ann_info']['seg_map']
-
+        ann_path = (results.get('seg_prefix') or '') + results['ann_info']['seg_map'] \
+            if results.get('seg_prefix') else results['ann_info']['seg_map']
         nimg = nib.load(ann_path)
-        seg = np.asanyarray(nimg.get_fdata())  # float -> ints
+        seg = np.asanyarray(nimg.get_fdata())
 
-        # choose slice
         if seg.ndim == 3:
             idx = self.slice_index if self.slice_index is not None else seg.shape[-1] // 2
             seg = seg[..., idx]
-        elif seg.ndim == 2:
-            pass
-        else:
-            raise ValueError(f'Unexpected label shape {seg.shape} in {ann_path}')
+        elif seg.ndim != 2:
+            raise ValueError(f'Unexpected label shape {seg.shape} for {ann_path}')
 
         seg = seg.astype(np.uint8)
 
         if self.reduce_zero_label:
-            # shift labels: 0->255(ignore), 1->0, 2->1, ...
             seg = seg.copy()
             seg[seg == 0] = 255
             seg = seg - 1
-            seg[seg == 254] = 255  # originally 255-1
+            seg[seg == 254] = 255
 
         results['gt_semantic_seg'] = seg
         results['seg_fields'] = ['gt_semantic_seg']

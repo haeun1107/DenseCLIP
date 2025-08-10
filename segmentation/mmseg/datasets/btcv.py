@@ -1,4 +1,4 @@
-# mmsegmentation/mmseg/datasets/btcv.py
+# mmseg/datasets/btcv.py
 import os.path as osp
 import numpy as np
 from .builder import DATASETS
@@ -14,23 +14,6 @@ class BTCVDataset(CustomDataset):
         'portal_vein_and_splenic_vein', 'pancreas',
         'adrenal_gland_right', 'adrenal_gland_left'
     ]
-    
-    # changing for gpt generated prompts
-    # CLASSES = [
-    #     "the spleen: a soft, fist-sized organ that filters blood and helps fight infections in the immune system.",
-    #     "the right kidney: a bean-shaped organ located in the right side of the abdomen, responsible for filtering waste from blood and producing urine.",
-    #     "the left kidney: a bean-shaped organ located in the left side of the abdomen that maintains fluid balance and removes toxins from the body.",
-    #     "the gallbladder: a small, pear-shaped organ under the liver that stores bile to aid in fat digestion.",
-    #     "the esophagus: a muscular tube connecting the throat to the stomach, allowing food and liquids to pass through.",
-    #     "the liver: a large reddish-brown organ that detoxifies chemicals, metabolizes drugs, and produces bile for digestion.",
-    #     "the stomach: a muscular, hollow organ that breaks down food using digestive acids and enzymes.",
-    #     "the aorta: the largest artery in the body that carries oxygen-rich blood from the heart to the rest of the body.",
-    #     "the inferior vena cava: a large vein that carries deoxygenated blood from the lower body back to the heart.",
-    #     "the portal and splenic veins: blood vessels that transport nutrient-rich blood from the gastrointestinal tract and spleen to the liver.",
-    #     "the pancreas: an elongated gland behind the stomach that helps with digestion and regulates blood sugar levels.",
-    #     "the right adrenal gland: a small gland sitting above the right kidney that produces hormones like adrenaline and cortisol.",
-    #     "the left adrenal gland: a hormone-secreting gland located above the left kidney, involved in stress response and metabolism."
-    # ]
 
     PALETTE = [[i * 20, i * 20, i * 20] for i in range(13)]
 

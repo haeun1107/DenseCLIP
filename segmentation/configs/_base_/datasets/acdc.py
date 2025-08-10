@@ -1,4 +1,4 @@
-# DenseCLIP/segmentation/configs/_base_/datasets/acdc.py
+# configs/_base_/datasets/acdc.py
 dataset_type = 'ACDCDataset'
 data_root = 'data/ACDC'
 
@@ -32,9 +32,6 @@ test_pipeline = [
         ])
 ]
 
-classes = ('right ventricle cavity','myocardium','left ventricle cavity')
-palette = [[0,0,255],[255,0,0],[0,255,0]]
-
 data = dict(
     samples_per_gpu=4, workers_per_gpu=4,
     train=dict(
@@ -42,20 +39,23 @@ data = dict(
         img_dir='training', ann_dir='training',
         split='splits/train.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
-        pipeline=train_pipeline, metainfo=dict(classes=classes, palette=palette)
+        slice_index=None,                          # <- dataset __init__로 전달됨
+        pipeline=train_pipeline
     ),
     val=dict(
         type=dataset_type, data_root=data_root,
         img_dir='testing', ann_dir='testing',
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
-        pipeline=test_pipeline, metainfo=dict(classes=classes, palette=palette)
+        slice_index=None,
+        pipeline=test_pipeline
     ),
     test=dict(
         type=dataset_type, data_root=data_root,
         img_dir='testing', ann_dir='testing',
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
-        pipeline=test_pipeline, metainfo=dict(classes=classes, palette=palette)
+        slice_index=None,
+        pipeline=test_pipeline
     ),
 )
