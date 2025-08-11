@@ -45,7 +45,7 @@ data = dict(
     ),
     val=dict(
         type=dataset_type, data_root=data_root,
-        img_dir='testing', ann_dir='testing',
+        img_dir='training', ann_dir='training',
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
@@ -54,8 +54,8 @@ data = dict(
     ),
     test=dict(
         type=dataset_type, data_root=data_root,
-        img_dir='testing', ann_dir='testing',
-        split='splits/val.txt',
+        img_dir='training', ann_dir='training',
+        split='splits/test.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
         reduce_zero_label=True,  
