@@ -5,7 +5,7 @@ import os
 
 @PIPELINES.register_module()
 class LoadNpzAnnotations:
-    def __init__(self, reduce_zero_label=True, suppress_labels=None):
+    def __init__(self, reduce_zero_label, suppress_labels=None):
         self.reduce_zero_label = reduce_zero_label
         self.suppress_labels = suppress_labels or []
 

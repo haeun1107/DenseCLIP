@@ -37,9 +37,9 @@ data = dict(
     train=dict(
         type=dataset_type, data_root=data_root,
         img_dir='training', ann_dir='training',
-        split='splits/train.txt',
+        split='splits/train_10.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
-        slice_index=None,                          # <- dataset __init__로 전달됨
+        slice_index=None,                         
         pipeline=train_pipeline
     ),
     val=dict(
