@@ -14,7 +14,7 @@ custom_imports = dict(
 )
 
 NUM_TEXT_CATS = 3   # 배경 제외
-NUM_CLASSES   = 4   # 배경 포함
+NUM_CLASSES   = 3   # 배경 제외
 
 model = dict(
     type='DenseCLIP',
@@ -42,12 +42,13 @@ model = dict(
     ),
     neck=dict(
         type='FPN',
-        in_channels=[256,512,1024,2048 + NUM_CLASSES],  # 2048+4
+        in_channels=[256,512,1024,2048 + NUM_TEXT_CATS],  # 2048+4
         out_channels=256, num_outs=4
     ),
     decode_head=dict(
         type='FPNHead',
         num_classes=NUM_CLASSES,
+        ignore_index=255,
         loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
     ),
 )

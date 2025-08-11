@@ -1,4 +1,5 @@
 # segmentation/mmseg/datasets/pipelines/load_nifti_annotation.py
+import os
 import numpy as np
 import nibabel as nib
 from mmseg.datasets.builder import PIPELINES

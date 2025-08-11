@@ -7,7 +7,7 @@ crop_size = (512, 512)
 
 train_pipeline = [
     dict(type='LoadNiftiImageFromFile', slice_index=None, clip=None, scale_to_uint8=True),
-    dict(type='LoadNiftiAnnotations', reduce_zero_label=False, slice_index=None),
+    dict(type='LoadNiftiAnnotations', reduce_zero_label=True, slice_index=None),
     dict(type='Resize', img_scale=crop_size, ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -39,7 +39,8 @@ data = dict(
         img_dir='training', ann_dir='training',
         split='splits/train_10.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
-        slice_index=None,                         
+        slice_index=None,
+        reduce_zero_label=True,                           
         pipeline=train_pipeline
     ),
     val=dict(
@@ -48,6 +49,7 @@ data = dict(
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
+        reduce_zero_label=True,  
         pipeline=test_pipeline
     ),
     test=dict(
@@ -56,6 +58,7 @@ data = dict(
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
+        reduce_zero_label=True,  
         pipeline=test_pipeline
     ),
 )

@@ -278,4 +278,11 @@ class BaseDecodeHead(BaseModule, metaclass=ABCMeta):
                     ignore_index=self.ignore_index)
 
         loss['acc_seg'] = accuracy(seg_logit, seg_label)
+        
+        # with torch.no_grad():
+        #     pred = seg_logit.argmax(1)
+        #     label = seg_label
+        #     valid = (label != self.ignore_index)
+        #     acc = (pred[valid] == label[valid]).float().mean() if valid.any() else pred.new_tensor(1.0)
+        # loss['acc_seg'] = acc
         return loss

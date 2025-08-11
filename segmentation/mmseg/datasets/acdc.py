@@ -1,10 +1,10 @@
-# segmentation/mmseg/datasets/acdc.py
 import os.path as osp
+import os
 import numpy as np
 import nibabel as nib
 
-from .builder import DATASETS           
-from .custom import CustomDataset      
+from .builder import DATASETS
+from .custom import CustomDataset
 
 @DATASETS.register_module()
 class ACDCDataset(CustomDataset):
@@ -18,9 +18,9 @@ class ACDCDataset(CustomDataset):
 
     # mmseg 0.x: CLASSES/PALETTE는 bg 포함도 가능. 여기선 참고용으로만 쓰고,
     # 실제 loss/class 수는 config에서 num_classes=4로 맞춰주세요.
-    CLASSES = ['background', 'right ventricle cavity', 'myocardium', 'left ventricle cavity']
-    PALETTE = [[0,0,0],[0,0,255],[255,0,0],[0,255,0]]
-
+    CLASSES = ['right ventricle cavity', 'myocardium', 'left ventricle cavity']
+    PALETTE = [[0,0,255],[255,0,0],[0,255,0]]
+    
     def __init__(self, split, slice_index=None, **kwargs):
         self.slice_index = slice_index
         super().__init__(split=split, **kwargs)
@@ -50,8 +50,22 @@ class ACDCDataset(CustomDataset):
             raise ValueError(f'Unexpected label shape {seg.shape} for {seg_map_filename}')
         return seg.astype(np.uint8)  # 0~3
 
+    def _apply_reduce_zero(self, seg):
+        # 0 -> 255(ignore), 1->0, 2->1, 3->2
+        seg = seg.astype(np.uint8).copy()
+        seg[seg == 0] = 255
+        seg = seg - 1
+        seg[seg == 254] = 255
+        return seg
+
     def get_gt_seg_map_by_idx(self, index):
-        return self._read_2d_label(self.img_infos[index]['ann_info']['seg_map'])
+        seg_path = self.img_infos[index]['ann_info']['seg_map']
+        seg = self._read_2d_label(seg_path)
+
+        # if getattr(self, 'reduce_zero_label', False):
+        #     seg = self._apply_reduce_zero(seg)
+
+        return seg
 
     def get_gt_seg_maps(self, efficient_test=False):
         return [self.get_gt_seg_map_by_idx(i) for i in range(len(self.img_infos))]
