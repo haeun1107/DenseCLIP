@@ -5956,3 +5956,1158 @@ after_run:
 | 94.46 | 89.76 | 94.86 | 94.46 | 94.58 |
 +-------+-------+-------+-------+-------+
 2025-08-12 04:32:49,589 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9446, mIoU: 0.8976, mAcc: 0.9486, mPrec: 0.9446, mDice: 0.9458, IoU.right ventricle cavity: 0.9272, IoU.myocardium: 0.8608, IoU.left ventricle cavity: 0.9048, Acc.right ventricle cavity: 0.9821, Acc.myocardium: 0.8897, Acc.left ventricle cavity: 0.9741, Prec.right ventricle cavity: 0.9432, Prec.myocardium: 0.9636, Prec.left ventricle cavity: 0.9271, Dice.right ventricle cavity: 0.9622, Dice.myocardium: 0.9252, Dice.left ventricle cavity: 0.9500
+2025-08-12 04:35:32,155 - mmseg - INFO - Iter [22650/80000]	lr: 7.437e-05, eta: 2 days, 0:06:09, time: 3.260, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.2686, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1832, loss: 0.0027
+2025-08-12 04:38:07,112 - mmseg - INFO - Saving checkpoint at 22700 iterations
+2025-08-12 04:38:11,058 - mmseg - INFO - Iter [22700/80000]	lr: 7.432e-05, eta: 2 days, 0:03:58, time: 3.178, data_time: 2.132, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5136, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4255, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 21.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 43.0 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 64.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 57.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 71.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 86.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 70.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 81.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 91.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 82.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 90.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 99.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 86.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 92.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 99.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 94.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 99.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 105.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 99.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 104.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 109.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 04:38:11,358 - mmseg - INFO - per class results:
+2025-08-12 04:38:11,358 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.94 | 98.88 | 93.93 | 96.34 |
+|       myocardium       | 86.17 |  89.1 | 96.33 | 92.57 |
+| left ventricle cavity  |  91.0 | 97.15 | 93.49 | 95.29 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 04:38:11,359 - mmseg - INFO - Summary:
+2025-08-12 04:38:11,359 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.61 | 90.04 | 95.04 | 94.58 | 94.73 |
++-------+-------+-------+-------+-------+
+2025-08-12 04:38:11,359 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9461, mIoU: 0.9004, mAcc: 0.9504, mPrec: 0.9458, mDice: 0.9473, IoU.right ventricle cavity: 0.9294, IoU.myocardium: 0.8617, IoU.left ventricle cavity: 0.9100, Acc.right ventricle cavity: 0.9888, Acc.myocardium: 0.8910, Acc.left ventricle cavity: 0.9715, Prec.right ventricle cavity: 0.9393, Prec.myocardium: 0.9633, Prec.left ventricle cavity: 0.9349, Dice.right ventricle cavity: 0.9634, Dice.myocardium: 0.9257, Dice.left ventricle cavity: 0.9529
+2025-08-12 04:40:45,450 - mmseg - INFO - Iter [22750/80000]	lr: 7.426e-05, eta: 2 days, 0:01:36, time: 3.088, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.4305, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3423, loss: 0.0028
+2025-08-12 04:43:19,979 - mmseg - INFO - Saving checkpoint at 22800 iterations
+2025-08-12 04:43:23,925 - mmseg - INFO - Iter [22800/80000]	lr: 7.420e-05, eta: 1 day, 23:59:23, time: 3.169, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.3939, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3075, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 38.5 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 57.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 58.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 72.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 86.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 93.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 104.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 96.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>              ] 11/20, 106.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 116.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>           ] 13/20, 107.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 115.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 123.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 115.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 122.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 129.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 122.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 129.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 135.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 04:43:24,206 - mmseg - INFO - per class results:
+2025-08-12 04:43:24,207 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.03 | 98.66 | 94.22 | 96.39 |
+|       myocardium       | 86.38 | 89.52 |  96.1 | 92.69 |
+| left ventricle cavity  | 90.93 | 96.99 | 93.57 | 95.25 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 04:43:24,208 - mmseg - INFO - Summary:
+2025-08-12 04:43:24,209 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.65 | 90.12 | 95.06 | 94.63 | 94.78 |
++-------+-------+-------+-------+-------+
+2025-08-12 04:43:24,210 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9465, mIoU: 0.9012, mAcc: 0.9506, mPrec: 0.9463, mDice: 0.9478, IoU.right ventricle cavity: 0.9303, IoU.myocardium: 0.8638, IoU.left ventricle cavity: 0.9093, Acc.right ventricle cavity: 0.9866, Acc.myocardium: 0.8952, Acc.left ventricle cavity: 0.9699, Prec.right ventricle cavity: 0.9422, Prec.myocardium: 0.9610, Prec.left ventricle cavity: 0.9357, Dice.right ventricle cavity: 0.9639, Dice.myocardium: 0.9269, Dice.left ventricle cavity: 0.9525
+2025-08-12 04:46:00,321 - mmseg - INFO - Iter [22850/80000]	lr: 7.414e-05, eta: 1 day, 23:57:06, time: 3.128, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.4374, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3497, loss: 0.0028
+2025-08-12 04:48:34,238 - mmseg - INFO - Saving checkpoint at 22900 iterations
+2025-08-12 04:48:38,184 - mmseg - INFO - Iter [22900/80000]	lr: 7.409e-05, eta: 1 day, 23:54:52, time: 3.157, data_time: 2.127, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2741, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1855, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.4 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 36.8 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 55.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 53.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 67.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 80.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 74.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 84.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 95.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 85.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 94.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 102.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 94.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 101.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 108.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 99.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 105.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 111.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 106.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 111.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 117.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 04:48:38,484 - mmseg - INFO - per class results:
+2025-08-12 04:48:38,484 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.63 | 98.21 | 94.22 | 96.17 |
+|       myocardium       | 86.46 | 89.54 | 96.17 | 92.74 |
+| left ventricle cavity  |  90.8 | 97.14 |  93.3 | 95.18 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 04:48:38,513 - mmseg - INFO - Summary:
+2025-08-12 04:48:38,514 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.58 | 89.96 | 94.96 | 94.56 |  94.7 |
++-------+-------+-------+-------+-------+
+2025-08-12 04:48:38,515 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9458, mIoU: 0.8996, mAcc: 0.9496, mPrec: 0.9456, mDice: 0.9470, IoU.right ventricle cavity: 0.9263, IoU.myocardium: 0.8646, IoU.left ventricle cavity: 0.9080, Acc.right ventricle cavity: 0.9821, Acc.myocardium: 0.8954, Acc.left ventricle cavity: 0.9714, Prec.right ventricle cavity: 0.9422, Prec.myocardium: 0.9617, Prec.left ventricle cavity: 0.9330, Dice.right ventricle cavity: 0.9617, Dice.myocardium: 0.9274, Dice.left ventricle cavity: 0.9518
+2025-08-12 04:51:16,170 - mmseg - INFO - Iter [22950/80000]	lr: 7.403e-05, eta: 1 day, 23:52:38, time: 3.160, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3067, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2208, loss: 0.0027
+2025-08-12 04:53:51,009 - mmseg - INFO - Saving checkpoint at 23000 iterations
+2025-08-12 04:53:54,939 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 04:53:54,939 - mmseg - INFO - Iter [23000/80000]	lr: 7.397e-05, eta: 1 day, 23:50:26, time: 3.175, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.1197, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.0329, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 22.2 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 44.4 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 66.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 65.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 81.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 97.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 90.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>                    ] 8/20, 103.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 116.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>                ] 10/20, 106.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>              ] 11/20, 117.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 127.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>           ] 13/20, 117.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 126.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 135.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 126.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 134.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 141.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 134.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 141.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 148.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 04:53:55,184 - mmseg - INFO - per class results:
+2025-08-12 04:53:55,184 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.07 |  98.7 | 94.22 | 96.41 |
+|       myocardium       | 86.51 | 89.77 | 95.97 | 92.77 |
+| left ventricle cavity  | 91.14 | 96.88 |  93.9 | 95.37 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 04:53:55,185 - mmseg - INFO - Summary:
+2025-08-12 04:53:55,185 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.72 | 90.24 | 95.12 |  94.7 | 94.85 |
++-------+-------+-------+-------+-------+
+2025-08-12 04:53:55,186 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 04:53:55,186 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9472, mIoU: 0.9024, mAcc: 0.9512, mPrec: 0.9470, mDice: 0.9485, IoU.right ventricle cavity: 0.9307, IoU.myocardium: 0.8651, IoU.left ventricle cavity: 0.9114, Acc.right ventricle cavity: 0.9870, Acc.myocardium: 0.8977, Acc.left ventricle cavity: 0.9688, Prec.right ventricle cavity: 0.9422, Prec.myocardium: 0.9597, Prec.left ventricle cavity: 0.9390, Dice.right ventricle cavity: 0.9641, Dice.myocardium: 0.9277, Dice.left ventricle cavity: 0.9537
+2025-08-12 04:56:14,629 - mmseg - INFO - Iter [23050/80000]	lr: 7.391e-05, eta: 1 day, 23:47:27, time: 2.794, data_time: 2.141, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2681, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1828, loss: 0.0027
+2025-08-12 04:58:50,190 - mmseg - INFO - Saving checkpoint at 23100 iterations
+2025-08-12 04:58:54,170 - mmseg - INFO - Iter [23100/80000]	lr: 7.386e-05, eta: 1 day, 23:45:17, time: 3.191, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.3913, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3020, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 38.5 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 57.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 49.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 62.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 74.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 64.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 73.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 82.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 70.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 77.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 84.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 74.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 80.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 86.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 77.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 82.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 87.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 79.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 83.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 88.1 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 04:58:54,525 - mmseg - INFO - per class results:
+2025-08-12 04:58:54,526 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.42 | 98.44 | 93.79 | 96.06 |
+|       myocardium       |  86.4 | 89.44 | 96.22 |  92.7 |
+| left ventricle cavity  | 91.08 | 97.08 | 93.65 | 95.33 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 04:58:54,526 - mmseg - INFO - Summary:
+2025-08-12 04:58:54,527 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.59 | 89.97 | 94.99 | 94.55 |  94.7 |
++-------+-------+-------+-------+-------+
+2025-08-12 04:58:54,528 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9459, mIoU: 0.8997, mAcc: 0.9499, mPrec: 0.9455, mDice: 0.9470, IoU.right ventricle cavity: 0.9242, IoU.myocardium: 0.8640, IoU.left ventricle cavity: 0.9108, Acc.right ventricle cavity: 0.9844, Acc.myocardium: 0.8944, Acc.left ventricle cavity: 0.9708, Prec.right ventricle cavity: 0.9379, Prec.myocardium: 0.9622, Prec.left ventricle cavity: 0.9365, Dice.right ventricle cavity: 0.9606, Dice.myocardium: 0.9270, Dice.left ventricle cavity: 0.9533
+2025-08-12 05:01:34,019 - mmseg - INFO - Iter [23150/80000]	lr: 7.380e-05, eta: 1 day, 23:43:07, time: 3.197, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.7233, aux_identity.loss_ce: 0.0016, aux_identity.acc_seg: 5.6338, loss: 0.0029
+2025-08-12 05:04:09,073 - mmseg - INFO - Saving checkpoint at 23200 iterations
+2025-08-12 05:04:13,111 - mmseg - INFO - Iter [23200/80000]	lr: 7.374e-05, eta: 1 day, 23:40:56, time: 3.182, data_time: 2.128, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2377, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1509, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 37.4 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 56.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 53.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 66.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 71.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 82.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 92.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 85.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 93.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 102.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 95.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 103.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 110.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 104.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 111.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 117.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 111.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 117.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 122.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:04:13,397 - mmseg - INFO - per class results:
+2025-08-12 05:04:13,398 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.58 | 98.48 | 93.92 | 96.15 |
+|       myocardium       | 86.19 | 89.33 | 96.08 | 92.58 |
+| left ventricle cavity  | 90.81 | 96.96 | 93.47 | 95.18 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:04:13,399 - mmseg - INFO - Summary:
+2025-08-12 05:04:13,399 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.52 | 89.86 | 94.92 | 94.49 | 94.64 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:04:13,399 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9452, mIoU: 0.8986, mAcc: 0.9492, mPrec: 0.9449, mDice: 0.9464, IoU.right ventricle cavity: 0.9258, IoU.myocardium: 0.8619, IoU.left ventricle cavity: 0.9081, Acc.right ventricle cavity: 0.9848, Acc.myocardium: 0.8933, Acc.left ventricle cavity: 0.9696, Prec.right ventricle cavity: 0.9392, Prec.myocardium: 0.9608, Prec.left ventricle cavity: 0.9347, Dice.right ventricle cavity: 0.9615, Dice.myocardium: 0.9258, Dice.left ventricle cavity: 0.9518
+2025-08-12 05:06:44,791 - mmseg - INFO - Iter [23250/80000]	lr: 7.368e-05, eta: 1 day, 23:38:26, time: 3.034, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.3972, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3089, loss: 0.0028
+2025-08-12 05:09:19,921 - mmseg - INFO - Saving checkpoint at 23300 iterations
+2025-08-12 05:09:23,975 - mmseg - INFO - Iter [23300/80000]	lr: 7.362e-05, eta: 1 day, 23:36:15, time: 3.184, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4007, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3137, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 49.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 67.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 66.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 79.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 82.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:09:24,337 - mmseg - INFO - per class results:
+2025-08-12 05:09:24,337 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.88 | 98.84 |  93.9 | 96.31 |
+|       myocardium       |  86.4 | 89.62 | 96.01 | 92.71 |
+| left ventricle cavity  | 91.22 | 96.83 | 94.03 | 95.41 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:09:24,338 - mmseg - INFO - Summary:
+2025-08-12 05:09:24,338 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.69 | 90.17 | 95.1 | 94.65 | 94.81 |
++-------+-------+------+-------+-------+
+2025-08-12 05:09:24,338 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9469, mIoU: 0.9017, mAcc: 0.9510, mPrec: 0.9465, mDice: 0.9481, IoU.right ventricle cavity: 0.9288, IoU.myocardium: 0.8640, IoU.left ventricle cavity: 0.9122, Acc.right ventricle cavity: 0.9884, Acc.myocardium: 0.8962, Acc.left ventricle cavity: 0.9683, Prec.right ventricle cavity: 0.9390, Prec.myocardium: 0.9601, Prec.left ventricle cavity: 0.9403, Dice.right ventricle cavity: 0.9631, Dice.myocardium: 0.9271, Dice.left ventricle cavity: 0.9541
+2025-08-12 05:12:01,418 - mmseg - INFO - Iter [23350/80000]	lr: 7.357e-05, eta: 1 day, 23:33:59, time: 3.149, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3407, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2549, loss: 0.0027
+2025-08-12 05:14:35,262 - mmseg - INFO - Saving checkpoint at 23400 iterations
+2025-08-12 05:14:40,016 - mmseg - INFO - Iter [23400/80000]	lr: 7.351e-05, eta: 1 day, 23:31:46, time: 3.172, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3688, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2809, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 15.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 31.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 46.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 43.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 53.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 64.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 57.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 65.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 64.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 71.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 77.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 69.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 75.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 80.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 73.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 77.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 82.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 75.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 83.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:14:40,382 - mmseg - INFO - per class results:
+2025-08-12 05:14:40,382 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.94 |  98.9 | 93.91 | 96.34 |
+|       myocardium       | 86.29 | 89.36 | 96.17 | 92.64 |
+| left ventricle cavity  |  91.1 | 96.96 | 93.78 | 95.34 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:14:40,382 - mmseg - INFO - Summary:
+2025-08-12 05:14:40,382 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.65 | 90.11 | 95.08 | 94.62 | 94.77 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:14:40,383 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9465, mIoU: 0.9011, mAcc: 0.9508, mPrec: 0.9462, mDice: 0.9477, IoU.right ventricle cavity: 0.9294, IoU.myocardium: 0.8629, IoU.left ventricle cavity: 0.9110, Acc.right ventricle cavity: 0.9890, Acc.myocardium: 0.8936, Acc.left ventricle cavity: 0.9696, Prec.right ventricle cavity: 0.9391, Prec.myocardium: 0.9617, Prec.left ventricle cavity: 0.9378, Dice.right ventricle cavity: 0.9634, Dice.myocardium: 0.9264, Dice.left ventricle cavity: 0.9534
+2025-08-12 05:17:13,928 - mmseg - INFO - Iter [23450/80000]	lr: 7.345e-05, eta: 1 day, 23:29:21, time: 3.078, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.1863, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1003, loss: 0.0027
+2025-08-12 05:19:46,062 - mmseg - INFO - Saving checkpoint at 23500 iterations
+2025-08-12 05:19:49,974 - mmseg - INFO - Iter [23500/80000]	lr: 7.339e-05, eta: 1 day, 23:27:02, time: 3.121, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3368, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2491, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 39.4 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 59.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 51.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 64.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 66.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 76.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 85.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 81.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 88.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 85.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 92.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 98.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 95.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 101.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 107.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 103.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 108.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 113.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:19:50,283 - mmseg - INFO - per class results:
+2025-08-12 05:19:50,283 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity |  93.0 | 98.74 | 94.12 | 96.37 |
+|       myocardium       | 86.28 | 89.22 | 96.32 | 92.64 |
+| left ventricle cavity  | 91.02 | 97.24 | 93.44 |  95.3 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:19:50,284 - mmseg - INFO - Summary:
+2025-08-12 05:19:50,284 - mmseg - INFO - 
++-------+------+-------+-------+-------+
+|  aAcc | mIoU |  mAcc | mPrec | mDice |
++-------+------+-------+-------+-------+
+| 94.65 | 90.1 | 95.07 | 94.63 | 94.77 |
++-------+------+-------+-------+-------+
+2025-08-12 05:19:50,285 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9465, mIoU: 0.9010, mAcc: 0.9507, mPrec: 0.9463, mDice: 0.9477, IoU.right ventricle cavity: 0.9300, IoU.myocardium: 0.8628, IoU.left ventricle cavity: 0.9102, Acc.right ventricle cavity: 0.9874, Acc.myocardium: 0.8922, Acc.left ventricle cavity: 0.9724, Prec.right ventricle cavity: 0.9412, Prec.myocardium: 0.9632, Prec.left ventricle cavity: 0.9344, Dice.right ventricle cavity: 0.9637, Dice.myocardium: 0.9264, Dice.left ventricle cavity: 0.9530
+2025-08-12 05:22:25,817 - mmseg - INFO - Iter [23550/80000]	lr: 7.334e-05, eta: 1 day, 23:24:42, time: 3.117, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5308, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4432, loss: 0.0028
+2025-08-12 05:25:00,281 - mmseg - INFO - Saving checkpoint at 23600 iterations
+2025-08-12 05:25:04,510 - mmseg - INFO - Iter [23600/80000]	lr: 7.328e-05, eta: 1 day, 23:22:29, time: 3.174, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.6444, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5565, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.4 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 53.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 48.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 60.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 72.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 64.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 73.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 82.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 71.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 78.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 86.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 76.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 82.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 88.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 80.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 85.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 90.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 82.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.0 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:25:04,878 - mmseg - INFO - per class results:
+2025-08-12 05:25:04,878 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.97 | 98.62 | 94.19 | 96.35 |
+|       myocardium       | 86.45 | 89.49 | 96.21 | 92.73 |
+| left ventricle cavity  | 90.99 |  97.1 | 93.53 | 95.28 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:25:04,879 - mmseg - INFO - Summary:
+2025-08-12 05:25:04,880 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.67 | 90.13 | 95.07 | 94.65 | 94.79 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:25:04,881 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9467, mIoU: 0.9013, mAcc: 0.9507, mPrec: 0.9465, mDice: 0.9479, IoU.right ventricle cavity: 0.9297, IoU.myocardium: 0.8645, IoU.left ventricle cavity: 0.9099, Acc.right ventricle cavity: 0.9862, Acc.myocardium: 0.8949, Acc.left ventricle cavity: 0.9710, Prec.right ventricle cavity: 0.9419, Prec.myocardium: 0.9621, Prec.left ventricle cavity: 0.9353, Dice.right ventricle cavity: 0.9635, Dice.myocardium: 0.9273, Dice.left ventricle cavity: 0.9528
+2025-08-12 05:27:40,389 - mmseg - INFO - Iter [23650/80000]	lr: 7.322e-05, eta: 1 day, 23:20:08, time: 3.118, data_time: 2.131, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3489, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2607, loss: 0.0027
+2025-08-12 05:30:17,309 - mmseg - INFO - Saving checkpoint at 23700 iterations
+2025-08-12 05:30:21,534 - mmseg - INFO - Iter [23700/80000]	lr: 7.316e-05, eta: 1 day, 23:18:01, time: 3.223, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3152, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2295, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.0 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 57.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 68.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 83.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 75.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:30:21,892 - mmseg - INFO - per class results:
+2025-08-12 05:30:21,892 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.75 | 98.74 | 93.86 | 96.24 |
+|       myocardium       | 85.74 | 88.66 | 96.31 | 92.32 |
+| left ventricle cavity  | 90.66 | 97.22 | 93.06 |  95.1 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:30:21,893 - mmseg - INFO - Summary:
+2025-08-12 05:30:21,894 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.43 | 89.72 | 94.87 | 94.41 | 94.55 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:30:21,895 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9443, mIoU: 0.8972, mAcc: 0.9487, mPrec: 0.9441, mDice: 0.9455, IoU.right ventricle cavity: 0.9275, IoU.myocardium: 0.8574, IoU.left ventricle cavity: 0.9066, Acc.right ventricle cavity: 0.9874, Acc.myocardium: 0.8866, Acc.left ventricle cavity: 0.9722, Prec.right ventricle cavity: 0.9386, Prec.myocardium: 0.9631, Prec.left ventricle cavity: 0.9306, Dice.right ventricle cavity: 0.9624, Dice.myocardium: 0.9232, Dice.left ventricle cavity: 0.9510
+2025-08-12 05:32:56,555 - mmseg - INFO - Iter [23750/80000]	lr: 7.311e-05, eta: 1 day, 23:15:39, time: 3.100, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5377, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4497, loss: 0.0028
+2025-08-12 05:35:29,918 - mmseg - INFO - Saving checkpoint at 23800 iterations
+2025-08-12 05:35:34,032 - mmseg - INFO - Iter [23800/80000]	lr: 7.305e-05, eta: 1 day, 23:13:22, time: 3.149, data_time: 2.131, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4735, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3866, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.2 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 57.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 69.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 83.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 75.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:35:34,386 - mmseg - INFO - per class results:
+2025-08-12 05:35:34,387 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.54 | 98.37 | 93.99 | 96.13 |
+|       myocardium       | 86.09 | 89.08 | 96.25 | 92.53 |
+| left ventricle cavity  |  90.7 |  97.2 | 93.13 | 95.12 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:35:34,388 - mmseg - INFO - Summary:
+2025-08-12 05:35:34,388 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.47 | 89.78 | 94.88 | 94.46 | 94.59 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:35:34,389 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9447, mIoU: 0.8978, mAcc: 0.9488, mPrec: 0.9446, mDice: 0.9459, IoU.right ventricle cavity: 0.9254, IoU.myocardium: 0.8609, IoU.left ventricle cavity: 0.9070, Acc.right ventricle cavity: 0.9837, Acc.myocardium: 0.8908, Acc.left ventricle cavity: 0.9720, Prec.right ventricle cavity: 0.9399, Prec.myocardium: 0.9625, Prec.left ventricle cavity: 0.9313, Dice.right ventricle cavity: 0.9613, Dice.myocardium: 0.9253, Dice.left ventricle cavity: 0.9512
+2025-08-12 05:38:08,527 - mmseg - INFO - Iter [23850/80000]	lr: 7.299e-05, eta: 1 day, 23:10:59, time: 3.090, data_time: 2.140, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2387, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1536, loss: 0.0027
+2025-08-12 05:40:41,446 - mmseg - INFO - Saving checkpoint at 23900 iterations
+2025-08-12 05:40:45,595 - mmseg - INFO - Iter [23900/80000]	lr: 7.293e-05, eta: 1 day, 23:08:41, time: 3.141, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3348, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2485, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 22.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 45.4 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 68.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 65.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 81.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 97.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 89.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>                    ] 8/20, 102.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 115.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 94.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>              ] 11/20, 103.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 112.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 96.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 104.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 111.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 102.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 109.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 115.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 102.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 107.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 113.2 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:40:45,896 - mmseg - INFO - per class results:
+2025-08-12 05:40:45,897 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.06 |  98.7 | 94.22 | 96.41 |
+|       myocardium       | 86.48 | 89.52 | 96.21 | 92.75 |
+| left ventricle cavity  | 91.14 | 97.14 | 93.65 | 95.36 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:40:45,898 - mmseg - INFO - Summary:
+2025-08-12 05:40:45,898 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.72 | 90.23 | 95.12 | 94.69 | 94.84 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:40:45,898 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9472, mIoU: 0.9023, mAcc: 0.9512, mPrec: 0.9469, mDice: 0.9484, IoU.right ventricle cavity: 0.9306, IoU.myocardium: 0.8648, IoU.left ventricle cavity: 0.9114, Acc.right ventricle cavity: 0.9870, Acc.myocardium: 0.8952, Acc.left ventricle cavity: 0.9714, Prec.right ventricle cavity: 0.9422, Prec.myocardium: 0.9621, Prec.left ventricle cavity: 0.9365, Dice.right ventricle cavity: 0.9641, Dice.myocardium: 0.9275, Dice.left ventricle cavity: 0.9536
+2025-08-12 05:43:19,472 - mmseg - INFO - Iter [23950/80000]	lr: 7.288e-05, eta: 1 day, 23:06:16, time: 3.078, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2951, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2095, loss: 0.0027
+2025-08-12 05:45:53,023 - mmseg - INFO - Saving checkpoint at 24000 iterations
+2025-08-12 05:45:57,116 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 05:45:57,116 - mmseg - INFO - Iter [24000/80000]	lr: 7.282e-05, eta: 1 day, 23:03:59, time: 3.153, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3053, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2185, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.6 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.2 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 52.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 48.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 60.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 72.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 72.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 82.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 71.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 78.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 85.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 76.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 82.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 88.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 80.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 85.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 90.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 82.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 87.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 91.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:45:57,466 - mmseg - INFO - per class results:
+2025-08-12 05:45:57,466 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.27 | 98.45 | 93.63 | 95.98 |
+|       myocardium       | 85.94 | 88.77 | 96.41 | 92.44 |
+| left ventricle cavity  | 90.79 | 97.31 | 93.13 | 95.17 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:45:57,467 - mmseg - INFO - Summary:
+2025-08-12 05:45:57,468 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.42 | 89.67 | 94.84 | 94.39 | 94.53 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:45:57,469 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 05:45:57,470 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9442, mIoU: 0.8967, mAcc: 0.9484, mPrec: 0.9439, mDice: 0.9453, IoU.right ventricle cavity: 0.9227, IoU.myocardium: 0.8594, IoU.left ventricle cavity: 0.9079, Acc.right ventricle cavity: 0.9845, Acc.myocardium: 0.8877, Acc.left ventricle cavity: 0.9731, Prec.right ventricle cavity: 0.9363, Prec.myocardium: 0.9641, Prec.left ventricle cavity: 0.9313, Dice.right ventricle cavity: 0.9598, Dice.myocardium: 0.9244, Dice.left ventricle cavity: 0.9517
+2025-08-12 05:48:32,424 - mmseg - INFO - Iter [24050/80000]	lr: 7.276e-05, eta: 1 day, 23:01:37, time: 3.106, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5967, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5098, loss: 0.0028
+2025-08-12 05:51:08,789 - mmseg - INFO - Saving checkpoint at 24100 iterations
+2025-08-12 05:51:12,915 - mmseg - INFO - Iter [24100/80000]	lr: 7.270e-05, eta: 1 day, 22:59:27, time: 3.210, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5332, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4465, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.2 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 57.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 69.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 69.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 81.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 72.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 49.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 52.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 50.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 53.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 57.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 54.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 57.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 60.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:51:13,380 - mmseg - INFO - per class results:
+2025-08-12 05:51:13,380 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.66 | 98.87 | 93.66 | 96.19 |
+|       myocardium       | 85.87 | 88.86 | 96.23 |  92.4 |
+| left ventricle cavity  | 90.89 | 97.06 | 93.47 | 95.23 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:51:13,381 - mmseg - INFO - Summary:
+2025-08-12 05:51:13,381 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.49 | 89.81 | 94.93 | 94.45 | 94.61 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:51:13,383 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9449, mIoU: 0.8981, mAcc: 0.9493, mPrec: 0.9445, mDice: 0.9461, IoU.right ventricle cavity: 0.9266, IoU.myocardium: 0.8587, IoU.left ventricle cavity: 0.9089, Acc.right ventricle cavity: 0.9887, Acc.myocardium: 0.8886, Acc.left ventricle cavity: 0.9706, Prec.right ventricle cavity: 0.9366, Prec.myocardium: 0.9623, Prec.left ventricle cavity: 0.9347, Dice.right ventricle cavity: 0.9619, Dice.myocardium: 0.9240, Dice.left ventricle cavity: 0.9523
+2025-08-12 05:53:53,324 - mmseg - INFO - Iter [24150/80000]	lr: 7.264e-05, eta: 1 day, 22:57:17, time: 3.208, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4142, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3272, loss: 0.0027
+2025-08-12 05:56:30,246 - mmseg - INFO - Saving checkpoint at 24200 iterations
+2025-08-12 05:56:34,399 - mmseg - INFO - Iter [24200/80000]	lr: 7.259e-05, eta: 1 day, 22:55:08, time: 3.221, data_time: 2.127, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3501, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2644, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.9 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.8 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 53.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 47.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 59.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 71.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 61.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 70.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 79.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 68.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 75.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 82.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 73.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 78.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 84.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 76.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 80.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 85.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 78.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 82.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 86.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 05:56:34,763 - mmseg - INFO - per class results:
+2025-08-12 05:56:34,764 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.06 | 98.78 | 94.15 | 96.41 |
+|       myocardium       | 86.44 | 89.41 |  96.3 | 92.73 |
+| left ventricle cavity  | 91.17 | 97.21 | 93.62 | 95.38 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 05:56:34,765 - mmseg - INFO - Summary:
+2025-08-12 05:56:34,765 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.72 | 90.22 | 95.13 | 94.69 | 94.84 |
++-------+-------+-------+-------+-------+
+2025-08-12 05:56:34,766 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9472, mIoU: 0.9022, mAcc: 0.9513, mPrec: 0.9469, mDice: 0.9484, IoU.right ventricle cavity: 0.9306, IoU.myocardium: 0.8644, IoU.left ventricle cavity: 0.9117, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8941, Acc.left ventricle cavity: 0.9721, Prec.right ventricle cavity: 0.9415, Prec.myocardium: 0.9630, Prec.left ventricle cavity: 0.9362, Dice.right ventricle cavity: 0.9641, Dice.myocardium: 0.9273, Dice.left ventricle cavity: 0.9538
+2025-08-12 05:59:08,209 - mmseg - INFO - Iter [24250/80000]	lr: 7.253e-05, eta: 1 day, 22:52:43, time: 3.076, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2432, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1567, loss: 0.0027
+2025-08-12 06:01:43,586 - mmseg - INFO - Saving checkpoint at 24300 iterations
+2025-08-12 06:01:47,798 - mmseg - INFO - Iter [24300/80000]	lr: 7.247e-05, eta: 1 day, 22:50:30, time: 3.192, data_time: 2.128, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2462, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1568, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.6 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 37.2 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 55.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 48.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 60.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 73.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 71.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 80.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 69.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 76.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 83.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 79.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 85.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 76.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 86.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 79.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 87.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:01:48,166 - mmseg - INFO - per class results:
+2025-08-12 06:01:48,167 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.75 | 98.87 | 93.75 | 96.24 |
+|       myocardium       | 86.01 | 89.07 | 96.15 | 92.48 |
+| left ventricle cavity  | 90.96 | 96.98 | 93.62 | 95.27 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:01:48,168 - mmseg - INFO - Summary:
+2025-08-12 06:01:48,168 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.54 | 89.91 | 94.97 | 94.51 | 94.66 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:01:48,168 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9454, mIoU: 0.8991, mAcc: 0.9497, mPrec: 0.9451, mDice: 0.9466, IoU.right ventricle cavity: 0.9275, IoU.myocardium: 0.8601, IoU.left ventricle cavity: 0.9096, Acc.right ventricle cavity: 0.9887, Acc.myocardium: 0.8907, Acc.left ventricle cavity: 0.9698, Prec.right ventricle cavity: 0.9375, Prec.myocardium: 0.9615, Prec.left ventricle cavity: 0.9362, Dice.right ventricle cavity: 0.9624, Dice.myocardium: 0.9248, Dice.left ventricle cavity: 0.9527
+2025-08-12 06:04:23,079 - mmseg - INFO - Iter [24350/80000]	lr: 7.241e-05, eta: 1 day, 22:48:08, time: 3.106, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4515, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3654, loss: 0.0027
+2025-08-12 06:07:04,268 - mmseg - INFO - Saving checkpoint at 24400 iterations
+2025-08-12 06:07:07,931 - mmseg - INFO - Iter [24400/80000]	lr: 7.236e-05, eta: 1 day, 22:46:07, time: 3.297, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3826, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2947, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.4 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 53.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 52.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 65.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 78.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 72.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 82.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 93.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 85.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 93.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 102.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 93.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 100.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 107.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 100.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 106.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 112.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 106.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 111.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 117.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:07:08,242 - mmseg - INFO - per class results:
+2025-08-12 06:07:08,243 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.05 | 98.58 | 94.31 |  96.4 |
+|       myocardium       | 86.49 | 89.57 | 96.18 | 92.76 |
+| left ventricle cavity  | 91.05 | 97.14 | 93.55 | 95.31 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:07:08,244 - mmseg - INFO - Summary:
+2025-08-12 06:07:08,244 - mmseg - INFO - 
++------+------+------+-------+-------+
+| aAcc | mIoU | mAcc | mPrec | mDice |
++------+------+------+-------+-------+
+| 94.7 | 90.2 | 95.1 | 94.68 | 94.82 |
++------+------+------+-------+-------+
+2025-08-12 06:07:08,244 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9470, mIoU: 0.9020, mAcc: 0.9510, mPrec: 0.9468, mDice: 0.9482, IoU.right ventricle cavity: 0.9305, IoU.myocardium: 0.8649, IoU.left ventricle cavity: 0.9105, Acc.right ventricle cavity: 0.9858, Acc.myocardium: 0.8957, Acc.left ventricle cavity: 0.9714, Prec.right ventricle cavity: 0.9431, Prec.myocardium: 0.9618, Prec.left ventricle cavity: 0.9355, Dice.right ventricle cavity: 0.9640, Dice.myocardium: 0.9276, Dice.left ventricle cavity: 0.9531
+2025-08-12 06:09:45,660 - mmseg - INFO - Iter [24450/80000]	lr: 7.230e-05, eta: 1 day, 22:43:50, time: 3.155, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.0852, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 4.9983, loss: 0.0026
+2025-08-12 06:12:20,686 - mmseg - INFO - Saving checkpoint at 24500 iterations
+2025-08-12 06:12:24,791 - mmseg - INFO - Iter [24500/80000]	lr: 7.224e-05, eta: 1 day, 22:41:36, time: 3.183, data_time: 2.126, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.5309, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4438, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 37.5 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 56.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 49.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 61.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 73.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 64.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 73.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 82.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 72.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 79.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 86.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 77.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 83.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 88.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 80.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 85.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 90.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 83.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 87.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 91.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:12:25,147 - mmseg - INFO - per class results:
+2025-08-12 06:12:25,148 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.88 | 98.69 | 94.03 | 96.31 |
+|       myocardium       | 86.24 | 89.21 | 96.28 | 92.61 |
+| left ventricle cavity  | 90.88 | 97.12 | 93.39 | 95.22 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:12:25,148 - mmseg - INFO - Summary:
+2025-08-12 06:12:25,149 - mmseg - INFO - 
++-------+------+-------+-------+-------+
+|  aAcc | mIoU |  mAcc | mPrec | mDice |
++-------+------+-------+-------+-------+
+| 94.59 | 90.0 | 95.01 | 94.57 | 94.71 |
++-------+------+-------+-------+-------+
+2025-08-12 06:12:25,151 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9459, mIoU: 0.9000, mAcc: 0.9501, mPrec: 0.9457, mDice: 0.9471, IoU.right ventricle cavity: 0.9288, IoU.myocardium: 0.8624, IoU.left ventricle cavity: 0.9088, Acc.right ventricle cavity: 0.9869, Acc.myocardium: 0.8921, Acc.left ventricle cavity: 0.9712, Prec.right ventricle cavity: 0.9403, Prec.myocardium: 0.9628, Prec.left ventricle cavity: 0.9339, Dice.right ventricle cavity: 0.9631, Dice.myocardium: 0.9261, Dice.left ventricle cavity: 0.9522
+2025-08-12 06:14:59,451 - mmseg - INFO - Iter [24550/80000]	lr: 7.218e-05, eta: 1 day, 22:39:12, time: 3.093, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4027, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3130, loss: 0.0028
+2025-08-12 06:17:33,227 - mmseg - INFO - Saving checkpoint at 24600 iterations
+2025-08-12 06:17:37,292 - mmseg - INFO - Iter [24600/80000]	lr: 7.212e-05, eta: 1 day, 22:36:55, time: 3.157, data_time: 2.131, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4083, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3203, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.2 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 36.3 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 54.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 49.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 61.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 74.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 64.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 74.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 72.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 79.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 86.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 77.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 89.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 80.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 85.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 90.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 83.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 87.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 92.2 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:17:37,653 - mmseg - INFO - per class results:
+2025-08-12 06:17:37,653 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.16 | 98.98 | 93.05 | 95.92 |
+|       myocardium       | 85.32 | 88.34 | 96.14 | 92.08 |
+| left ventricle cavity  | 90.78 | 96.91 | 93.49 | 95.17 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:17:37,654 - mmseg - INFO - Summary:
+2025-08-12 06:17:37,655 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.27 | 89.42 | 94.74 | 94.23 | 94.39 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:17:37,655 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9427, mIoU: 0.8942, mAcc: 0.9474, mPrec: 0.9423, mDice: 0.9439, IoU.right ventricle cavity: 0.9216, IoU.myocardium: 0.8532, IoU.left ventricle cavity: 0.9078, Acc.right ventricle cavity: 0.9898, Acc.myocardium: 0.8834, Acc.left ventricle cavity: 0.9691, Prec.right ventricle cavity: 0.9305, Prec.myocardium: 0.9614, Prec.left ventricle cavity: 0.9349, Dice.right ventricle cavity: 0.9592, Dice.myocardium: 0.9208, Dice.left ventricle cavity: 0.9517
+2025-08-12 06:20:16,045 - mmseg - INFO - Iter [24650/80000]	lr: 7.207e-05, eta: 1 day, 22:34:40, time: 3.175, data_time: 2.138, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3197, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2344, loss: 0.0027
+2025-08-12 06:22:51,097 - mmseg - INFO - Saving checkpoint at 24700 iterations
+2025-08-12 06:22:55,272 - mmseg - INFO - Iter [24700/80000]	lr: 7.201e-05, eta: 1 day, 22:32:26, time: 3.184, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0014, decode.acc_seg: 5.2030, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1165, loss: 0.0029
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.0 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.9 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 57.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 68.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 82.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 75.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:22:55,644 - mmseg - INFO - per class results:
+2025-08-12 06:22:55,644 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 90.81 | 98.81 | 91.81 | 95.18 |
+|       myocardium       | 83.82 | 87.04 | 95.77 |  91.2 |
+| left ventricle cavity  | 90.31 | 96.67 | 93.21 | 94.91 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:22:55,645 - mmseg - INFO - Summary:
+2025-08-12 06:22:55,645 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 93.66 | 88.31 | 94.17 |  93.6 | 93.76 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:22:55,646 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9366, mIoU: 0.8831, mAcc: 0.9417, mPrec: 0.9360, mDice: 0.9376, IoU.right ventricle cavity: 0.9081, IoU.myocardium: 0.8382, IoU.left ventricle cavity: 0.9031, Acc.right ventricle cavity: 0.9881, Acc.myocardium: 0.8704, Acc.left ventricle cavity: 0.9667, Prec.right ventricle cavity: 0.9181, Prec.myocardium: 0.9577, Prec.left ventricle cavity: 0.9321, Dice.right ventricle cavity: 0.9518, Dice.myocardium: 0.9120, Dice.left ventricle cavity: 0.9491
+2025-08-12 06:25:32,478 - mmseg - INFO - Iter [24750/80000]	lr: 7.195e-05, eta: 1 day, 22:30:07, time: 3.144, data_time: 2.143, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.2074, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1215, loss: 0.0028
+2025-08-12 06:28:06,356 - mmseg - INFO - Saving checkpoint at 24800 iterations
+2025-08-12 06:28:10,440 - mmseg - INFO - Iter [24800/80000]	lr: 7.189e-05, eta: 1 day, 22:27:50, time: 3.159, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.4416, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3511, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.2 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.3 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 48.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 44.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 55.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 66.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 58.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 75.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 65.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 72.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 79.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 70.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 81.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.6 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:28:10,812 - mmseg - INFO - per class results:
+2025-08-12 06:28:10,812 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.17 | 98.78 | 93.23 | 95.92 |
+|       myocardium       | 85.31 | 88.14 | 96.38 | 92.08 |
+| left ventricle cavity  | 90.83 | 97.33 | 93.15 |  95.2 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:28:10,812 - mmseg - INFO - Summary:
+2025-08-12 06:28:10,813 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.28 | 89.44 | 94.75 | 94.25 |  94.4 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:28:10,813 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9428, mIoU: 0.8944, mAcc: 0.9475, mPrec: 0.9425, mDice: 0.9440, IoU.right ventricle cavity: 0.9217, IoU.myocardium: 0.8531, IoU.left ventricle cavity: 0.9083, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8814, Acc.left ventricle cavity: 0.9733, Prec.right ventricle cavity: 0.9323, Prec.myocardium: 0.9638, Prec.left ventricle cavity: 0.9315, Dice.right ventricle cavity: 0.9592, Dice.myocardium: 0.9208, Dice.left ventricle cavity: 0.9520
+2025-08-12 06:30:42,974 - mmseg - INFO - Iter [24850/80000]	lr: 7.184e-05, eta: 1 day, 22:25:21, time: 3.051, data_time: 2.142, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.7431, aux_identity.loss_ce: 0.0016, aux_identity.acc_seg: 5.6517, loss: 0.0029
+2025-08-12 06:33:15,554 - mmseg - INFO - Saving checkpoint at 24900 iterations
+2025-08-12 06:33:19,669 - mmseg - INFO - Iter [24900/80000]	lr: 7.178e-05, eta: 1 day, 22:23:00, time: 3.134, data_time: 2.131, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5033, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4146, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.5 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 68.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 82.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:33:20,055 - mmseg - INFO - per class results:
+2025-08-12 06:33:20,055 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.26 |  98.9 | 93.22 | 95.97 |
+|       myocardium       | 85.26 | 88.08 | 96.38 | 92.04 |
+| left ventricle cavity  |  90.7 | 97.24 | 93.09 | 95.12 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:33:20,057 - mmseg - INFO - Summary:
+2025-08-12 06:33:20,057 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.26 | 89.41 | 94.74 | 94.23 | 94.38 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:33:20,058 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9426, mIoU: 0.8941, mAcc: 0.9474, mPrec: 0.9423, mDice: 0.9438, IoU.right ventricle cavity: 0.9226, IoU.myocardium: 0.8526, IoU.left ventricle cavity: 0.9070, Acc.right ventricle cavity: 0.9890, Acc.myocardium: 0.8808, Acc.left ventricle cavity: 0.9724, Prec.right ventricle cavity: 0.9322, Prec.myocardium: 0.9638, Prec.left ventricle cavity: 0.9309, Dice.right ventricle cavity: 0.9597, Dice.myocardium: 0.9204, Dice.left ventricle cavity: 0.9512
+2025-08-12 06:35:56,311 - mmseg - INFO - Iter [24950/80000]	lr: 7.172e-05, eta: 1 day, 22:20:40, time: 3.133, data_time: 2.142, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4310, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3420, loss: 0.0027
+2025-08-12 06:38:28,928 - mmseg - INFO - Saving checkpoint at 25000 iterations
+2025-08-12 06:38:33,105 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 06:38:33,105 - mmseg - INFO - Iter [25000/80000]	lr: 7.166e-05, eta: 1 day, 22:18:20, time: 3.136, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4424, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3518, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.4 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 68.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 66.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 82.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 79.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.3 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:38:33,483 - mmseg - INFO - per class results:
+2025-08-12 06:38:33,484 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.41 | 98.82 | 93.44 | 96.06 |
+|       myocardium       | 85.77 | 88.83 | 96.13 | 92.34 |
+| left ventricle cavity  | 91.01 | 97.01 | 93.64 | 95.29 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:38:33,485 - mmseg - INFO - Summary:
+2025-08-12 06:38:33,486 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.45 | 89.73 | 94.89 |  94.4 | 94.56 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:38:33,487 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 06:38:33,488 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9445, mIoU: 0.8973, mAcc: 0.9489, mPrec: 0.9440, mDice: 0.9456, IoU.right ventricle cavity: 0.9241, IoU.myocardium: 0.8577, IoU.left ventricle cavity: 0.9101, Acc.right ventricle cavity: 0.9882, Acc.myocardium: 0.8883, Acc.left ventricle cavity: 0.9701, Prec.right ventricle cavity: 0.9344, Prec.myocardium: 0.9613, Prec.left ventricle cavity: 0.9364, Dice.right ventricle cavity: 0.9606, Dice.myocardium: 0.9234, Dice.left ventricle cavity: 0.9529
+2025-08-12 06:41:10,713 - mmseg - INFO - Iter [25050/80000]	lr: 7.160e-05, eta: 1 day, 22:16:02, time: 3.152, data_time: 2.140, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5058, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4190, loss: 0.0028
+2025-08-12 06:43:48,223 - mmseg - INFO - Saving checkpoint at 25100 iterations
+2025-08-12 06:43:51,820 - mmseg - INFO - Iter [25100/80000]	lr: 7.155e-05, eta: 1 day, 22:13:51, time: 3.222, data_time: 2.132, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.1523, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.0679, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.4 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.7 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 49.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 47.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 59.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 70.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 72.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 73.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 80.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 88.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 80.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 87.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 93.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 87.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 92.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 98.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 90.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 95.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 100.2 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:43:52,148 - mmseg - INFO - per class results:
+2025-08-12 06:43:52,149 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.65 |  98.8 | 93.71 | 96.19 |
+|       myocardium       | 85.91 | 88.93 |  96.2 | 92.42 |
+| left ventricle cavity  | 90.97 |  97.1 | 93.51 | 95.27 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:43:52,155 - mmseg - INFO - Summary:
+2025-08-12 06:43:52,155 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.51 | 89.84 | 94.94 | 94.47 | 94.63 |
++-------+-------+-------+-------+-------+
+2025-08-12 06:43:52,155 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9451, mIoU: 0.8984, mAcc: 0.9494, mPrec: 0.9447, mDice: 0.9463, IoU.right ventricle cavity: 0.9265, IoU.myocardium: 0.8591, IoU.left ventricle cavity: 0.9097, Acc.right ventricle cavity: 0.9880, Acc.myocardium: 0.8893, Acc.left ventricle cavity: 0.9710, Prec.right ventricle cavity: 0.9371, Prec.myocardium: 0.9620, Prec.left ventricle cavity: 0.9351, Dice.right ventricle cavity: 0.9619, Dice.myocardium: 0.9242, Dice.left ventricle cavity: 0.9527
+2025-08-12 06:46:25,739 - mmseg - INFO - Iter [25150/80000]	lr: 7.149e-05, eta: 1 day, 22:11:25, time: 3.078, data_time: 2.144, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3129, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2264, loss: 0.0027
+2025-08-12 06:48:59,085 - mmseg - INFO - Saving checkpoint at 25200 iterations
+2025-08-12 06:49:03,193 - mmseg - INFO - Iter [25200/80000]	lr: 7.143e-05, eta: 1 day, 22:09:06, time: 3.149, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2861, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2003, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 52.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 47.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 58.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 70.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 67.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 77.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 86.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 77.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 84.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 92.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 85.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 91.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 98.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 93.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 98.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 104.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 96.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 101.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 106.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:49:03,508 - mmseg - INFO - per class results:
+2025-08-12 06:49:03,508 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.51 | 98.72 | 93.64 | 96.11 |
+|       myocardium       | 85.78 |  88.7 | 96.31 | 92.35 |
+| left ventricle cavity  | 90.98 | 97.29 | 93.35 | 95.28 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:49:03,509 - mmseg - INFO - Summary:
+2025-08-12 06:49:03,509 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.46 | 89.76 | 94.9 | 94.43 | 94.58 |
++-------+-------+------+-------+-------+
+2025-08-12 06:49:03,509 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9446, mIoU: 0.8976, mAcc: 0.9490, mPrec: 0.9443, mDice: 0.9458, IoU.right ventricle cavity: 0.9251, IoU.myocardium: 0.8578, IoU.left ventricle cavity: 0.9098, Acc.right ventricle cavity: 0.9872, Acc.myocardium: 0.8870, Acc.left ventricle cavity: 0.9729, Prec.right ventricle cavity: 0.9364, Prec.myocardium: 0.9631, Prec.left ventricle cavity: 0.9335, Dice.right ventricle cavity: 0.9611, Dice.myocardium: 0.9235, Dice.left ventricle cavity: 0.9528
+2025-08-12 06:51:41,178 - mmseg - INFO - Iter [25250/80000]	lr: 7.137e-05, eta: 1 day, 22:06:48, time: 3.160, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5523, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4635, loss: 0.0028
+2025-08-12 06:54:15,513 - mmseg - INFO - Saving checkpoint at 25300 iterations
+2025-08-12 06:54:19,499 - mmseg - INFO - Iter [25300/80000]	lr: 7.132e-05, eta: 1 day, 22:04:31, time: 3.166, data_time: 2.128, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2827, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1924, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.5 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 47.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 59.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 71.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 72.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 81.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 69.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 76.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 83.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 75.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 80.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 86.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 78.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 83.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 88.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 81.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 85.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 90.2 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:54:19,846 - mmseg - INFO - per class results:
+2025-08-12 06:54:19,847 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.35 | 98.77 | 93.43 | 96.02 |
+|       myocardium       | 85.46 | 88.33 | 96.34 | 92.16 |
+| left ventricle cavity  | 90.81 | 97.29 | 93.17 | 95.18 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:54:19,847 - mmseg - INFO - Summary:
+2025-08-12 06:54:19,847 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.34 | 89.54 | 94.8 | 94.31 | 94.46 |
++-------+-------+------+-------+-------+
+2025-08-12 06:54:19,848 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9434, mIoU: 0.8954, mAcc: 0.9480, mPrec: 0.9431, mDice: 0.9446, IoU.right ventricle cavity: 0.9235, IoU.myocardium: 0.8546, IoU.left ventricle cavity: 0.9081, Acc.right ventricle cavity: 0.9877, Acc.myocardium: 0.8833, Acc.left ventricle cavity: 0.9729, Prec.right ventricle cavity: 0.9343, Prec.myocardium: 0.9634, Prec.left ventricle cavity: 0.9317, Dice.right ventricle cavity: 0.9602, Dice.myocardium: 0.9216, Dice.left ventricle cavity: 0.9518
+2025-08-12 06:56:57,048 - mmseg - INFO - Iter [25350/80000]	lr: 7.126e-05, eta: 1 day, 22:02:12, time: 3.151, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5468, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4572, loss: 0.0028
+2025-08-12 06:59:33,397 - mmseg - INFO - Saving checkpoint at 25400 iterations
+2025-08-12 06:59:36,982 - mmseg - INFO - Iter [25400/80000]	lr: 7.120e-05, eta: 1 day, 21:59:59, time: 3.199, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4451, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3574, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.6 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 51.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 63.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 76.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 69.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 79.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 89.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 87.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 95.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 89.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 96.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 102.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 97.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 103.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 110.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 104.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 110.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 115.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 06:59:37,277 - mmseg - INFO - per class results:
+2025-08-12 06:59:37,278 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.27 |  98.9 | 93.23 | 95.98 |
+|       myocardium       |  85.8 | 88.93 | 96.07 | 92.36 |
+| left ventricle cavity  | 91.15 | 96.87 | 93.92 | 95.37 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 06:59:37,278 - mmseg - INFO - Summary:
+2025-08-12 06:59:37,278 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.46 | 89.74 | 94.9 |  94.4 | 94.57 |
++-------+-------+------+-------+-------+
+2025-08-12 06:59:37,278 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9446, mIoU: 0.8974, mAcc: 0.9490, mPrec: 0.9440, mDice: 0.9457, IoU.right ventricle cavity: 0.9227, IoU.myocardium: 0.8580, IoU.left ventricle cavity: 0.9115, Acc.right ventricle cavity: 0.9890, Acc.myocardium: 0.8893, Acc.left ventricle cavity: 0.9687, Prec.right ventricle cavity: 0.9323, Prec.myocardium: 0.9607, Prec.left ventricle cavity: 0.9392, Dice.right ventricle cavity: 0.9598, Dice.myocardium: 0.9236, Dice.left ventricle cavity: 0.9537
+2025-08-12 07:02:17,633 - mmseg - INFO - Iter [25450/80000]	lr: 7.114e-05, eta: 1 day, 21:57:46, time: 3.213, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3592, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2715, loss: 0.0027
+2025-08-12 07:04:56,234 - mmseg - INFO - Saving checkpoint at 25500 iterations
+2025-08-12 07:05:00,151 - mmseg - INFO - Iter [25500/80000]	lr: 7.108e-05, eta: 1 day, 21:55:38, time: 3.250, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4544, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3672, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 39.6 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 59.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 58.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 73.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 87.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 93.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 104.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 92.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>              ] 11/20, 101.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 110.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>           ] 13/20, 104.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 112.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 120.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 112.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 119.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 126.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 120.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 126.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 132.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:05:00,420 - mmseg - INFO - per class results:
+2025-08-12 07:05:00,420 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.74 | 98.78 | 93.81 | 96.23 |
+|       myocardium       | 86.13 | 89.24 | 96.11 | 92.55 |
+| left ventricle cavity  | 91.09 |  97.0 | 93.73 | 95.34 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:05:00,421 - mmseg - INFO - Summary:
+2025-08-12 07:05:00,421 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.59 | 89.98 | 95.01 | 94.55 |  94.7 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:05:00,422 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9459, mIoU: 0.8998, mAcc: 0.9501, mPrec: 0.9455, mDice: 0.9470, IoU.right ventricle cavity: 0.9274, IoU.myocardium: 0.8613, IoU.left ventricle cavity: 0.9109, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8924, Acc.left ventricle cavity: 0.9700, Prec.right ventricle cavity: 0.9381, Prec.myocardium: 0.9611, Prec.left ventricle cavity: 0.9373, Dice.right ventricle cavity: 0.9623, Dice.myocardium: 0.9255, Dice.left ventricle cavity: 0.9534
+2025-08-12 07:07:35,883 - mmseg - INFO - Iter [25550/80000]	lr: 7.103e-05, eta: 1 day, 21:53:15, time: 3.115, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2645, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1760, loss: 0.0027
+2025-08-12 07:10:21,770 - mmseg - INFO - Saving checkpoint at 25600 iterations
+2025-08-12 07:10:26,037 - mmseg - INFO - Iter [25600/80000]	lr: 7.097e-05, eta: 1 day, 21:51:22, time: 3.403, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3294, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2430, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.6 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.1 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 52.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 48.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 60.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 72.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 72.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 71.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 78.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 85.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 76.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 82.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 87.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 79.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 84.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 89.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 82.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 86.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 91.2 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:10:26,394 - mmseg - INFO - per class results:
+2025-08-12 07:10:26,394 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.74 |  98.8 | 93.79 | 96.23 |
+|       myocardium       | 85.75 |  88.7 | 96.27 | 92.33 |
+| left ventricle cavity  | 90.75 | 97.18 | 93.21 | 95.15 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:10:26,395 - mmseg - INFO - Summary:
+2025-08-12 07:10:26,395 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.45 | 89.75 | 94.89 | 94.42 | 94.57 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:10:26,395 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9445, mIoU: 0.8975, mAcc: 0.9489, mPrec: 0.9442, mDice: 0.9457, IoU.right ventricle cavity: 0.9274, IoU.myocardium: 0.8575, IoU.left ventricle cavity: 0.9075, Acc.right ventricle cavity: 0.9880, Acc.myocardium: 0.8870, Acc.left ventricle cavity: 0.9718, Prec.right ventricle cavity: 0.9379, Prec.myocardium: 0.9627, Prec.left ventricle cavity: 0.9321, Dice.right ventricle cavity: 0.9623, Dice.myocardium: 0.9233, Dice.left ventricle cavity: 0.9515
+2025-08-12 07:13:03,273 - mmseg - INFO - Iter [25650/80000]	lr: 7.091e-05, eta: 1 day, 21:49:02, time: 3.145, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4662, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3779, loss: 0.0027
+2025-08-12 07:15:48,384 - mmseg - INFO - Saving checkpoint at 25700 iterations
+2025-08-12 07:15:52,332 - mmseg - INFO - Iter [25700/80000]	lr: 7.085e-05, eta: 1 day, 21:47:07, time: 3.381, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4863, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3982, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 20.9 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 41.7 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 62.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 59.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 73.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 88.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 80.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 91.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 102.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 90.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 99.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 108.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 98.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 106.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 113.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 106.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 113.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 119.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 109.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 115.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 120.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:15:52,615 - mmseg - INFO - per class results:
+2025-08-12 07:15:52,616 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.26 | 98.87 | 93.24 | 95.98 |
+|       myocardium       | 85.52 | 88.36 | 96.38 | 92.19 |
+| left ventricle cavity  | 90.95 | 97.25 | 93.35 | 95.26 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:15:52,651 - mmseg - INFO - Summary:
+2025-08-12 07:15:52,652 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.36 | 89.58 | 94.83 | 94.32 | 94.48 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:15:52,653 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9436, mIoU: 0.8958, mAcc: 0.9483, mPrec: 0.9432, mDice: 0.9448, IoU.right ventricle cavity: 0.9226, IoU.myocardium: 0.8552, IoU.left ventricle cavity: 0.9095, Acc.right ventricle cavity: 0.9887, Acc.myocardium: 0.8836, Acc.left ventricle cavity: 0.9725, Prec.right ventricle cavity: 0.9324, Prec.myocardium: 0.9638, Prec.left ventricle cavity: 0.9335, Dice.right ventricle cavity: 0.9598, Dice.myocardium: 0.9219, Dice.left ventricle cavity: 0.9526
+2025-08-12 07:18:34,179 - mmseg - INFO - Iter [25750/80000]	lr: 7.079e-05, eta: 1 day, 21:44:56, time: 3.237, data_time: 2.131, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3219, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2340, loss: 0.0027
+2025-08-12 07:21:10,220 - mmseg - INFO - Saving checkpoint at 25800 iterations
+2025-08-12 07:21:14,231 - mmseg - INFO - Iter [25800/80000]	lr: 7.074e-05, eta: 1 day, 21:42:42, time: 3.201, data_time: 2.127, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.0364, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 4.9500, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.0 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 48.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 67.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 69.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 68.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 64.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 70.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 64.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 68.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 73.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 68.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 73.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 77.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 72.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 79.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:21:14,602 - mmseg - INFO - per class results:
+2025-08-12 07:21:14,603 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity |  92.3 | 98.88 | 93.28 |  96.0 |
+|       myocardium       | 85.52 | 88.43 |  96.3 |  92.2 |
+| left ventricle cavity  |  90.9 | 97.15 | 93.39 | 95.23 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:21:14,604 - mmseg - INFO - Summary:
+2025-08-12 07:21:14,604 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.36 | 89.58 | 94.82 | 94.32 | 94.48 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:21:14,605 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9436, mIoU: 0.8958, mAcc: 0.9482, mPrec: 0.9432, mDice: 0.9448, IoU.right ventricle cavity: 0.9230, IoU.myocardium: 0.8552, IoU.left ventricle cavity: 0.9090, Acc.right ventricle cavity: 0.9888, Acc.myocardium: 0.8843, Acc.left ventricle cavity: 0.9715, Prec.right ventricle cavity: 0.9328, Prec.myocardium: 0.9630, Prec.left ventricle cavity: 0.9339, Dice.right ventricle cavity: 0.9600, Dice.myocardium: 0.9220, Dice.left ventricle cavity: 0.9523
+2025-08-12 07:25:04,882 - mmseg - INFO - Iter [25850/80000]	lr: 7.068e-05, eta: 1 day, 21:42:55, time: 4.613, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3176, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2299, loss: 0.0027
+2025-08-12 07:27:46,052 - mmseg - INFO - Saving checkpoint at 25900 iterations
+2025-08-12 07:27:49,615 - mmseg - INFO - Iter [25900/80000]	lr: 7.062e-05, eta: 1 day, 21:40:50, time: 3.295, data_time: 2.126, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2830, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1977, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.2 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 52.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 47.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 58.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 70.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 63.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 72.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 81.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 75.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 90.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 84.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 91.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 97.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 90.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 96.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 101.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 94.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 99.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 104.6 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:27:49,930 - mmseg - INFO - per class results:
+2025-08-12 07:27:49,931 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.48 | 98.82 | 93.51 | 96.09 |
+|       myocardium       |  85.7 | 88.59 | 96.33 |  92.3 |
+| left ventricle cavity  | 90.93 | 97.23 | 93.35 | 95.25 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:27:49,942 - mmseg - INFO - Summary:
+2025-08-12 07:27:49,942 - mmseg - INFO - 
++-------+------+-------+-------+-------+
+|  aAcc | mIoU |  mAcc | mPrec | mDice |
++-------+------+-------+-------+-------+
+| 94.43 | 89.7 | 94.88 |  94.4 | 94.55 |
++-------+------+-------+-------+-------+
+2025-08-12 07:27:49,942 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9443, mIoU: 0.8970, mAcc: 0.9488, mPrec: 0.9440, mDice: 0.9455, IoU.right ventricle cavity: 0.9248, IoU.myocardium: 0.8570, IoU.left ventricle cavity: 0.9093, Acc.right ventricle cavity: 0.9882, Acc.myocardium: 0.8859, Acc.left ventricle cavity: 0.9723, Prec.right ventricle cavity: 0.9351, Prec.myocardium: 0.9633, Prec.left ventricle cavity: 0.9335, Dice.right ventricle cavity: 0.9609, Dice.myocardium: 0.9230, Dice.left ventricle cavity: 0.9525
+2025-08-12 07:30:26,350 - mmseg - INFO - Iter [25950/80000]	lr: 7.056e-05, eta: 1 day, 21:38:28, time: 3.135, data_time: 2.140, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2409, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1550, loss: 0.0027
+2025-08-12 07:33:57,079 - mmseg - INFO - Saving checkpoint at 26000 iterations
+2025-08-12 07:34:01,354 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 07:34:01,354 - mmseg - INFO - Iter [26000/80000]	lr: 7.050e-05, eta: 1 day, 21:38:07, time: 4.300, data_time: 2.127, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2443, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1565, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.1 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 57.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 69.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 69.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 81.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 72.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 83.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 75.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 80.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 78.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 82.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 86.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:34:01,717 - mmseg - INFO - per class results:
+2025-08-12 07:34:01,717 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.38 | 98.84 | 93.39 | 96.04 |
+|       myocardium       | 85.69 | 88.65 | 96.25 | 92.29 |
+| left ventricle cavity  | 90.99 | 97.12 | 93.51 | 95.28 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:34:01,718 - mmseg - INFO - Summary:
+2025-08-12 07:34:01,718 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.42 | 89.69 | 94.87 | 94.38 | 94.54 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:34:01,719 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 07:34:01,720 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9442, mIoU: 0.8969, mAcc: 0.9487, mPrec: 0.9438, mDice: 0.9454, IoU.right ventricle cavity: 0.9238, IoU.myocardium: 0.8569, IoU.left ventricle cavity: 0.9099, Acc.right ventricle cavity: 0.9884, Acc.myocardium: 0.8865, Acc.left ventricle cavity: 0.9712, Prec.right ventricle cavity: 0.9339, Prec.myocardium: 0.9625, Prec.left ventricle cavity: 0.9351, Dice.right ventricle cavity: 0.9604, Dice.myocardium: 0.9229, Dice.left ventricle cavity: 0.9528
+2025-08-12 07:36:58,373 - mmseg - INFO - Iter [26050/80000]	lr: 7.045e-05, eta: 1 day, 21:36:26, time: 3.540, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4082, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3213, loss: 0.0027
+2025-08-12 07:39:37,978 - mmseg - INFO - Saving checkpoint at 26100 iterations
+2025-08-12 07:39:41,971 - mmseg - INFO - Iter [26100/80000]	lr: 7.039e-05, eta: 1 day, 21:34:18, time: 3.272, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2962, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2100, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.0 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 49.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 67.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 66.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 79.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 81.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:39:42,351 - mmseg - INFO - per class results:
+2025-08-12 07:39:42,352 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.62 | 98.78 | 93.69 | 96.17 |
+|       myocardium       | 85.78 | 88.74 | 96.25 | 92.34 |
+| left ventricle cavity  | 90.88 | 97.17 | 93.34 | 95.22 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:39:42,352 - mmseg - INFO - Summary:
+2025-08-12 07:39:42,353 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.46 | 89.76 | 94.9 | 94.43 | 94.58 |
++-------+-------+------+-------+-------+
+2025-08-12 07:39:42,353 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9446, mIoU: 0.8976, mAcc: 0.9490, mPrec: 0.9443, mDice: 0.9458, IoU.right ventricle cavity: 0.9262, IoU.myocardium: 0.8578, IoU.left ventricle cavity: 0.9088, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8874, Acc.left ventricle cavity: 0.9717, Prec.right ventricle cavity: 0.9369, Prec.myocardium: 0.9625, Prec.left ventricle cavity: 0.9334, Dice.right ventricle cavity: 0.9617, Dice.myocardium: 0.9234, Dice.left ventricle cavity: 0.9522
+2025-08-12 07:42:21,382 - mmseg - INFO - Iter [26150/80000]	lr: 7.033e-05, eta: 1 day, 21:32:00, time: 3.188, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2764, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1862, loss: 0.0027
+2025-08-12 07:44:56,810 - mmseg - INFO - Saving checkpoint at 26200 iterations
+2025-08-12 07:45:00,817 - mmseg - INFO - Iter [26200/80000]	lr: 7.027e-05, eta: 1 day, 21:29:43, time: 3.189, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2619, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1747, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.2 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 48.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 44.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 55.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 66.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 58.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 66.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 75.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 65.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 72.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 79.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 70.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 81.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:45:01,189 - mmseg - INFO - per class results:
+2025-08-12 07:45:01,189 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.14 | 98.87 | 93.12 | 95.91 |
+|       myocardium       | 85.46 | 88.31 | 96.35 | 92.16 |
+| left ventricle cavity  | 90.98 | 97.22 | 93.41 | 95.28 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:45:01,191 - mmseg - INFO - Summary:
+2025-08-12 07:45:01,191 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.34 | 89.53 | 94.8 | 94.29 | 94.45 |
++-------+-------+------+-------+-------+
+2025-08-12 07:45:01,192 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9434, mIoU: 0.8953, mAcc: 0.9480, mPrec: 0.9429, mDice: 0.9445, IoU.right ventricle cavity: 0.9214, IoU.myocardium: 0.8546, IoU.left ventricle cavity: 0.9098, Acc.right ventricle cavity: 0.9887, Acc.myocardium: 0.8831, Acc.left ventricle cavity: 0.9722, Prec.right ventricle cavity: 0.9312, Prec.myocardium: 0.9635, Prec.left ventricle cavity: 0.9341, Dice.right ventricle cavity: 0.9591, Dice.myocardium: 0.9216, Dice.left ventricle cavity: 0.9528
+2025-08-12 07:47:38,525 - mmseg - INFO - Iter [26250/80000]	lr: 7.022e-05, eta: 1 day, 21:27:22, time: 3.154, data_time: 2.136, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2948, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2050, loss: 0.0027
+2025-08-12 07:50:14,507 - mmseg - INFO - Saving checkpoint at 26300 iterations
+2025-08-12 07:50:18,413 - mmseg - INFO - Iter [26300/80000]	lr: 7.016e-05, eta: 1 day, 21:25:06, time: 3.198, data_time: 2.129, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3655, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2797, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 35.6 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 53.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 54.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 67.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 81.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 75.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 86.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 97.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 87.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 96.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 105.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 95.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 102.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 109.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 103.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 109.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 116.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 111.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 116.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 122.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:50:18,705 - mmseg - INFO - per class results:
+2025-08-12 07:50:18,706 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.75 | 98.72 | 93.88 | 96.24 |
+|       myocardium       | 86.16 | 89.17 | 96.24 | 92.57 |
+| left ventricle cavity  | 91.14 |  97.2 |  93.6 | 95.37 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:50:18,707 - mmseg - INFO - Summary:
+2025-08-12 07:50:18,707 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.61 | 90.02 | 95.03 | 94.57 | 94.72 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:50:18,708 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9461, mIoU: 0.9002, mAcc: 0.9503, mPrec: 0.9457, mDice: 0.9472, IoU.right ventricle cavity: 0.9275, IoU.myocardium: 0.8616, IoU.left ventricle cavity: 0.9114, Acc.right ventricle cavity: 0.9872, Acc.myocardium: 0.8917, Acc.left ventricle cavity: 0.9720, Prec.right ventricle cavity: 0.9388, Prec.myocardium: 0.9624, Prec.left ventricle cavity: 0.9360, Dice.right ventricle cavity: 0.9624, Dice.myocardium: 0.9257, Dice.left ventricle cavity: 0.9537
+2025-08-12 07:52:53,770 - mmseg - INFO - Iter [26350/80000]	lr: 7.010e-05, eta: 1 day, 21:22:40, time: 3.107, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3515, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2656, loss: 0.0027
+2025-08-12 07:55:30,967 - mmseg - INFO - Saving checkpoint at 26400 iterations
+2025-08-12 07:55:34,502 - mmseg - INFO - Iter [26400/80000]	lr: 7.004e-05, eta: 1 day, 21:20:25, time: 3.215, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5674, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4768, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 20.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 40.2 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 60.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 56.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 70.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 84.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 75.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 86.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 97.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 87.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 96.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 104.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 94.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 101.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 108.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 102.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 108.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 114.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 108.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 114.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 120.0 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 07:55:34,793 - mmseg - INFO - per class results:
+2025-08-12 07:55:34,794 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.83 | 98.78 | 93.91 | 96.28 |
+|       myocardium       | 85.93 | 88.85 | 96.31 | 92.43 |
+| left ventricle cavity  | 90.87 | 97.24 | 93.27 | 95.21 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 07:55:34,794 - mmseg - INFO - Summary:
+2025-08-12 07:55:34,795 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.52 | 89.87 | 94.96 |  94.5 | 94.64 |
++-------+-------+-------+-------+-------+
+2025-08-12 07:55:34,796 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9452, mIoU: 0.8987, mAcc: 0.9496, mPrec: 0.9450, mDice: 0.9464, IoU.right ventricle cavity: 0.9283, IoU.myocardium: 0.8593, IoU.left ventricle cavity: 0.9087, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8885, Acc.left ventricle cavity: 0.9724, Prec.right ventricle cavity: 0.9391, Prec.myocardium: 0.9631, Prec.left ventricle cavity: 0.9327, Dice.right ventricle cavity: 0.9628, Dice.myocardium: 0.9243, Dice.left ventricle cavity: 0.9521
+2025-08-12 07:58:13,787 - mmseg - INFO - Iter [26450/80000]	lr: 6.998e-05, eta: 1 day, 21:18:07, time: 3.186, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3083, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2218, loss: 0.0027
+2025-08-12 08:00:49,334 - mmseg - INFO - Saving checkpoint at 26500 iterations
+2025-08-12 08:00:53,075 - mmseg - INFO - Iter [26500/80000]	lr: 6.993e-05, eta: 1 day, 21:15:48, time: 3.186, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3815, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2964, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 37.5 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 56.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 51.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 64.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 77.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 74.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 84.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 95.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 89.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 97.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 106.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 96.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 104.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 111.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 102.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 108.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 115.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 108.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 114.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 120.3 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:00:53,366 - mmseg - INFO - per class results:
+2025-08-12 08:00:53,367 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.64 | 98.78 | 93.72 | 96.18 |
+|       myocardium       | 86.09 | 89.08 | 96.25 | 92.52 |
+| left ventricle cavity  | 91.16 | 97.16 | 93.65 | 95.37 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:00:53,368 - mmseg - INFO - Summary:
+2025-08-12 08:00:53,368 - mmseg - INFO - 
++-------+-------+------+-------+-------+
+|  aAcc |  mIoU | mAcc | mPrec | mDice |
++-------+-------+------+-------+-------+
+| 94.58 | 89.96 | 95.0 | 94.54 | 94.69 |
++-------+-------+------+-------+-------+
+2025-08-12 08:00:53,369 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9458, mIoU: 0.8996, mAcc: 0.9500, mPrec: 0.9454, mDice: 0.9469, IoU.right ventricle cavity: 0.9264, IoU.myocardium: 0.8609, IoU.left ventricle cavity: 0.9116, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8908, Acc.left ventricle cavity: 0.9716, Prec.right ventricle cavity: 0.9372, Prec.myocardium: 0.9625, Prec.left ventricle cavity: 0.9365, Dice.right ventricle cavity: 0.9618, Dice.myocardium: 0.9252, Dice.left ventricle cavity: 0.9537
+2025-08-12 08:03:29,486 - mmseg - INFO - Iter [26550/80000]	lr: 6.987e-05, eta: 1 day, 21:13:24, time: 3.128, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3562, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2681, loss: 0.0027
+2025-08-12 08:06:06,258 - mmseg - INFO - Saving checkpoint at 26600 iterations
+2025-08-12 08:06:10,405 - mmseg - INFO - Iter [26600/80000]	lr: 6.981e-05, eta: 1 day, 21:11:09, time: 3.218, data_time: 2.128, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3153, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2284, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 15.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 31.6 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 47.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 43.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 54.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 65.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 58.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 66.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 74.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 65.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 71.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 78.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 70.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 75.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 80.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 73.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 82.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.1 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:06:10,770 - mmseg - INFO - per class results:
+2025-08-12 08:06:10,771 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.87 | 98.78 | 93.95 |  96.3 |
+|       myocardium       | 86.23 |  89.2 | 96.28 | 92.61 |
+| left ventricle cavity  | 91.11 | 97.19 | 93.58 | 95.35 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:06:10,772 - mmseg - INFO - Summary:
+2025-08-12 08:06:10,773 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.63 | 90.07 | 95.06 |  94.6 | 94.75 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:06:10,774 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9463, mIoU: 0.9007, mAcc: 0.9506, mPrec: 0.9460, mDice: 0.9475, IoU.right ventricle cavity: 0.9287, IoU.myocardium: 0.8623, IoU.left ventricle cavity: 0.9111, Acc.right ventricle cavity: 0.9878, Acc.myocardium: 0.8920, Acc.left ventricle cavity: 0.9719, Prec.right ventricle cavity: 0.9395, Prec.myocardium: 0.9628, Prec.left ventricle cavity: 0.9358, Dice.right ventricle cavity: 0.9630, Dice.myocardium: 0.9261, Dice.left ventricle cavity: 0.9535
+2025-08-12 08:08:45,169 - mmseg - INFO - Iter [26650/80000]	lr: 6.975e-05, eta: 1 day, 21:08:42, time: 3.095, data_time: 2.141, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5866, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4972, loss: 0.0028
+2025-08-12 08:11:18,032 - mmseg - INFO - Saving checkpoint at 26700 iterations
+2025-08-12 08:11:22,075 - mmseg - INFO - Iter [26700/80000]	lr: 6.969e-05, eta: 1 day, 21:06:19, time: 3.138, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4183, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3301, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.4 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 68.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 68.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 66.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 73.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 80.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 71.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 82.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 82.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 75.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 79.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 83.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:11:22,436 - mmseg - INFO - per class results:
+2025-08-12 08:11:22,437 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.47 | 98.88 | 93.45 | 96.09 |
+|       myocardium       | 85.61 | 88.53 | 96.29 | 92.25 |
+| left ventricle cavity  | 90.84 | 97.14 | 93.34 |  95.2 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:11:22,437 - mmseg - INFO - Summary:
+2025-08-12 08:11:22,437 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.39 | 89.64 | 94.85 | 94.36 | 94.51 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:11:22,437 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9439, mIoU: 0.8964, mAcc: 0.9485, mPrec: 0.9436, mDice: 0.9451, IoU.right ventricle cavity: 0.9247, IoU.myocardium: 0.8561, IoU.left ventricle cavity: 0.9084, Acc.right ventricle cavity: 0.9888, Acc.myocardium: 0.8853, Acc.left ventricle cavity: 0.9714, Prec.right ventricle cavity: 0.9345, Prec.myocardium: 0.9629, Prec.left ventricle cavity: 0.9334, Dice.right ventricle cavity: 0.9609, Dice.myocardium: 0.9225, Dice.left ventricle cavity: 0.9520
+2025-08-12 08:14:00,339 - mmseg - INFO - Iter [26750/80000]	lr: 6.964e-05, eta: 1 day, 21:03:58, time: 3.165, data_time: 2.144, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4225, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3341, loss: 0.0027
+2025-08-12 08:16:35,639 - mmseg - INFO - Saving checkpoint at 26800 iterations
+2025-08-12 08:16:39,882 - mmseg - INFO - Iter [26800/80000]	lr: 6.958e-05, eta: 1 day, 21:01:40, time: 3.191, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3544, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2664, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.1 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.1 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 48.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 44.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 55.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 66.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 58.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 66.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 75.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 65.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 72.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 78.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 70.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 75.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 81.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 73.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.5 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:16:40,252 - mmseg - INFO - per class results:
+2025-08-12 08:16:40,252 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.63 | 98.81 | 93.68 | 96.17 |
+|       myocardium       | 85.78 |  88.7 | 96.31 | 92.35 |
+| left ventricle cavity  | 90.89 | 97.22 | 93.31 | 95.23 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:16:40,253 - mmseg - INFO - Summary:
+2025-08-12 08:16:40,253 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.46 | 89.76 | 94.91 | 94.43 | 94.58 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:16:40,254 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9446, mIoU: 0.8976, mAcc: 0.9491, mPrec: 0.9443, mDice: 0.9458, IoU.right ventricle cavity: 0.9263, IoU.myocardium: 0.8578, IoU.left ventricle cavity: 0.9089, Acc.right ventricle cavity: 0.9881, Acc.myocardium: 0.8870, Acc.left ventricle cavity: 0.9722, Prec.right ventricle cavity: 0.9368, Prec.myocardium: 0.9631, Prec.left ventricle cavity: 0.9331, Dice.right ventricle cavity: 0.9617, Dice.myocardium: 0.9235, Dice.left ventricle cavity: 0.9523
+2025-08-12 08:19:15,760 - mmseg - INFO - Iter [26850/80000]	lr: 6.952e-05, eta: 1 day, 20:59:15, time: 3.118, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0013, decode.acc_seg: 5.6364, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5462, loss: 0.0028
+2025-08-12 08:21:55,176 - mmseg - INFO - Saving checkpoint at 26900 iterations
+2025-08-12 08:21:58,811 - mmseg - INFO - Iter [26900/80000]	lr: 6.946e-05, eta: 1 day, 20:57:04, time: 3.261, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3932, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3053, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.4 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.7 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 52.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 49.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 61.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 74.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 68.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 87.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 80.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 88.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 96.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 88.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 94.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 101.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 94.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 100.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 105.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 96.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 101.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 106.7 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:21:59,131 - mmseg - INFO - per class results:
+2025-08-12 08:21:59,132 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.41 | 98.75 | 93.51 | 96.05 |
+|       myocardium       | 85.91 | 89.04 | 96.07 | 92.42 |
+| left ventricle cavity  | 91.14 | 96.99 | 93.79 | 95.36 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:21:59,132 - mmseg - INFO - Summary:
+2025-08-12 08:21:59,132 - mmseg - INFO - 
++------+-------+-------+-------+-------+
+| aAcc |  mIoU |  mAcc | mPrec | mDice |
++------+-------+-------+-------+-------+
+| 94.5 | 89.82 | 94.93 | 94.45 | 94.61 |
++------+-------+-------+-------+-------+
+2025-08-12 08:21:59,133 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9450, mIoU: 0.8982, mAcc: 0.9493, mPrec: 0.9445, mDice: 0.9461, IoU.right ventricle cavity: 0.9241, IoU.myocardium: 0.8591, IoU.left ventricle cavity: 0.9114, Acc.right ventricle cavity: 0.9875, Acc.myocardium: 0.8904, Acc.left ventricle cavity: 0.9699, Prec.right ventricle cavity: 0.9351, Prec.myocardium: 0.9607, Prec.left ventricle cavity: 0.9379, Dice.right ventricle cavity: 0.9605, Dice.myocardium: 0.9242, Dice.left ventricle cavity: 0.9536
+2025-08-12 08:24:36,198 - mmseg - INFO - Iter [26950/80000]	lr: 6.940e-05, eta: 1 day, 20:54:41, time: 3.148, data_time: 2.138, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4248, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3367, loss: 0.0027
+2025-08-12 08:27:10,251 - mmseg - INFO - Saving checkpoint at 27000 iterations
+2025-08-12 08:27:14,527 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 08:27:14,527 - mmseg - INFO - Iter [27000/80000]	lr: 6.935e-05, eta: 1 day, 20:52:21, time: 3.167, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.6798, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5935, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 17.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 34.5 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 51.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 58.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 69.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 60.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 69.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 77.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 81.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 72.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 83.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 75.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 80.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 84.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 81.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 85.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:27:14,887 - mmseg - INFO - per class results:
+2025-08-12 08:27:14,887 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.94 | 98.66 | 94.12 | 96.34 |
+|       myocardium       | 86.49 | 89.72 | 96.01 | 92.75 |
+| left ventricle cavity  | 91.25 | 96.97 | 93.94 | 95.43 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:27:14,888 - mmseg - INFO - Summary:
+2025-08-12 08:27:14,889 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.72 | 90.23 | 95.11 | 94.69 | 94.84 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:27:14,890 - mmseg - INFO - Exp name: denseclip_fpn_res50_512x512_80k_acdc.py
+2025-08-12 08:27:14,891 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9472, mIoU: 0.9023, mAcc: 0.9511, mPrec: 0.9469, mDice: 0.9484, IoU.right ventricle cavity: 0.9294, IoU.myocardium: 0.8649, IoU.left ventricle cavity: 0.9125, Acc.right ventricle cavity: 0.9866, Acc.myocardium: 0.8972, Acc.left ventricle cavity: 0.9697, Prec.right ventricle cavity: 0.9412, Prec.myocardium: 0.9601, Prec.left ventricle cavity: 0.9394, Dice.right ventricle cavity: 0.9634, Dice.myocardium: 0.9275, Dice.left ventricle cavity: 0.9543
+2025-08-12 08:29:52,099 - mmseg - INFO - Iter [27050/80000]	lr: 6.929e-05, eta: 1 day, 20:49:58, time: 3.151, data_time: 2.138, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3512, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2644, loss: 0.0027
+2025-08-12 08:32:31,806 - mmseg - INFO - Saving checkpoint at 27100 iterations
+2025-08-12 08:32:36,052 - mmseg - INFO - Iter [27100/80000]	lr: 6.923e-05, eta: 1 day, 20:47:48, time: 3.279, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5993, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5103, loss: 0.0028
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 38.5 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 57.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 59.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 74.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 89.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 85.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 97.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                  ] 9/20, 109.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>                ] 10/20, 101.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>              ] 11/20, 111.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 121.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>           ] 13/20, 112.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 121.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 130.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 121.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 129.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 137.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 124.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 131.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 137.8 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:32:36,318 - mmseg - INFO - per class results:
+2025-08-12 08:32:36,319 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 93.04 | 98.72 | 94.18 |  96.4 |
+|       myocardium       | 86.56 | 89.74 | 96.06 | 92.79 |
+| left ventricle cavity  | 91.24 | 96.98 | 93.91 | 95.42 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:32:36,320 - mmseg - INFO - Summary:
+2025-08-12 08:32:36,320 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.75 | 90.28 | 95.15 | 94.72 | 94.87 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:32:36,321 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9475, mIoU: 0.9028, mAcc: 0.9515, mPrec: 0.9472, mDice: 0.9487, IoU.right ventricle cavity: 0.9304, IoU.myocardium: 0.8656, IoU.left ventricle cavity: 0.9124, Acc.right ventricle cavity: 0.9872, Acc.myocardium: 0.8974, Acc.left ventricle cavity: 0.9698, Prec.right ventricle cavity: 0.9418, Prec.myocardium: 0.9606, Prec.left ventricle cavity: 0.9391, Dice.right ventricle cavity: 0.9640, Dice.myocardium: 0.9279, Dice.left ventricle cavity: 0.9542
+2025-08-12 08:35:10,301 - mmseg - INFO - Iter [27150/80000]	lr: 6.917e-05, eta: 1 day, 20:45:20, time: 3.085, data_time: 2.138, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4614, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3737, loss: 0.0027
+2025-08-12 08:37:45,449 - mmseg - INFO - Saving checkpoint at 27200 iterations
+2025-08-12 08:37:49,664 - mmseg - INFO - Iter [27200/80000]	lr: 6.911e-05, eta: 1 day, 20:43:01, time: 3.187, data_time: 2.130, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4706, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3814, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.2 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.4 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 48.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 44.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 55.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 66.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 58.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 75.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 66.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 72.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 79.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 70.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 76.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 81.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 74.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 78.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 83.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 76.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 80.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 84.6 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:37:50,027 - mmseg - INFO - per class results:
+2025-08-12 08:37:50,028 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.92 | 98.69 | 94.07 | 96.33 |
+|       myocardium       |  86.5 | 89.67 | 96.08 | 92.76 |
+| left ventricle cavity  |  91.3 | 97.02 | 93.93 | 95.45 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:37:50,029 - mmseg - INFO - Summary:
+2025-08-12 08:37:50,029 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.73 | 90.24 | 95.13 |  94.7 | 94.85 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:37:50,029 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9473, mIoU: 0.9024, mAcc: 0.9513, mPrec: 0.9470, mDice: 0.9485, IoU.right ventricle cavity: 0.9292, IoU.myocardium: 0.8650, IoU.left ventricle cavity: 0.9130, Acc.right ventricle cavity: 0.9869, Acc.myocardium: 0.8967, Acc.left ventricle cavity: 0.9702, Prec.right ventricle cavity: 0.9407, Prec.myocardium: 0.9608, Prec.left ventricle cavity: 0.9393, Dice.right ventricle cavity: 0.9633, Dice.myocardium: 0.9276, Dice.left ventricle cavity: 0.9545
+2025-08-12 08:40:25,516 - mmseg - INFO - Iter [27250/80000]	lr: 6.906e-05, eta: 1 day, 20:40:35, time: 3.117, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.4772, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.3891, loss: 0.0027
+2025-08-12 08:43:01,358 - mmseg - INFO - Saving checkpoint at 27300 iterations
+2025-08-12 08:43:05,541 - mmseg - INFO - Iter [27300/80000]	lr: 6.900e-05, eta: 1 day, 20:38:17, time: 3.200, data_time: 2.132, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2083, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1232, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.3 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 38.6 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 57.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 52.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 65.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 79.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 73.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 83.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 93.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 83.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 91.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 99.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 92.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 99.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 106.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 96.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 102.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 108.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 99.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 104.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 109.9 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:43:05,845 - mmseg - INFO - per class results:
+2025-08-12 08:43:05,846 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.24 | 98.75 | 93.33 | 95.96 |
+|       myocardium       | 85.93 | 88.96 | 96.18 | 92.43 |
+| left ventricle cavity  | 91.32 | 97.12 | 93.86 | 95.46 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:43:05,847 - mmseg - INFO - Summary:
+2025-08-12 08:43:05,848 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.51 | 89.83 | 94.94 | 94.46 | 94.62 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:43:05,848 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9451, mIoU: 0.8983, mAcc: 0.9494, mPrec: 0.9446, mDice: 0.9462, IoU.right ventricle cavity: 0.9224, IoU.myocardium: 0.8593, IoU.left ventricle cavity: 0.9132, Acc.right ventricle cavity: 0.9875, Acc.myocardium: 0.8896, Acc.left ventricle cavity: 0.9712, Prec.right ventricle cavity: 0.9333, Prec.myocardium: 0.9618, Prec.left ventricle cavity: 0.9386, Dice.right ventricle cavity: 0.9596, Dice.myocardium: 0.9243, Dice.left ventricle cavity: 0.9546
+2025-08-12 08:45:41,583 - mmseg - INFO - Iter [27350/80000]	lr: 6.894e-05, eta: 1 day, 20:35:51, time: 3.121, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3089, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2203, loss: 0.0027
+2025-08-12 08:48:20,282 - mmseg - INFO - Saving checkpoint at 27400 iterations
+2025-08-12 08:48:23,913 - mmseg - INFO - Iter [27400/80000]	lr: 6.888e-05, eta: 1 day, 20:33:38, time: 3.247, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3168, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2292, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 19.2 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 38.4 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 57.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 54.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 68.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 82.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 74.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 85.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 95.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 84.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 93.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>             ] 12/20, 101.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 86.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 93.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 99.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 89.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 95.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 100.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 90.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 94.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 99.4 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:48:24,251 - mmseg - INFO - per class results:
+2025-08-12 08:48:24,252 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.51 | 98.84 | 93.53 | 96.11 |
+|       myocardium       | 86.16 | 89.29 | 96.09 | 92.57 |
+| left ventricle cavity  |  91.3 | 96.93 | 94.03 | 95.45 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:48:24,252 - mmseg - INFO - Summary:
+2025-08-12 08:48:24,253 - mmseg - INFO - 
++------+-------+-------+-------+-------+
+| aAcc |  mIoU |  mAcc | mPrec | mDice |
++------+-------+-------+-------+-------+
+| 94.6 | 89.99 | 95.02 | 94.55 | 94.71 |
++------+-------+-------+-------+-------+
+2025-08-12 08:48:24,253 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9460, mIoU: 0.8999, mAcc: 0.9502, mPrec: 0.9455, mDice: 0.9471, IoU.right ventricle cavity: 0.9251, IoU.myocardium: 0.8616, IoU.left ventricle cavity: 0.9130, Acc.right ventricle cavity: 0.9884, Acc.myocardium: 0.8929, Acc.left ventricle cavity: 0.9693, Prec.right ventricle cavity: 0.9353, Prec.myocardium: 0.9609, Prec.left ventricle cavity: 0.9403, Dice.right ventricle cavity: 0.9611, Dice.myocardium: 0.9257, Dice.left ventricle cavity: 0.9545
+2025-08-12 08:51:01,567 - mmseg - INFO - Iter [27450/80000]	lr: 6.882e-05, eta: 1 day, 20:31:15, time: 3.153, data_time: 2.133, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2773, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1899, loss: 0.0026
+2025-08-12 08:53:39,632 - mmseg - INFO - Saving checkpoint at 27500 iterations
+2025-08-12 08:53:43,272 - mmseg - INFO - Iter [27500/80000]	lr: 6.876e-05, eta: 1 day, 20:29:00, time: 3.234, data_time: 2.122, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.2229, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1357, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.4 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 32.7 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 49.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 44.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 55.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 67.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 75.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 70.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 78.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 85.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 76.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 82.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 87.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 84.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 89.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 94.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 87.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 92.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 96.6 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:53:43,602 - mmseg - INFO - per class results:
+2025-08-12 08:53:43,602 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.56 | 98.79 | 93.62 | 96.14 |
+|       myocardium       | 85.87 | 88.85 | 96.24 |  92.4 |
+| left ventricle cavity  | 91.01 | 97.15 | 93.51 | 95.29 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:53:43,603 - mmseg - INFO - Summary:
+2025-08-12 08:53:43,603 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.49 | 89.81 | 94.93 | 94.46 | 94.61 |
++-------+-------+-------+-------+-------+
+2025-08-12 08:53:43,604 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9449, mIoU: 0.8981, mAcc: 0.9493, mPrec: 0.9446, mDice: 0.9461, IoU.right ventricle cavity: 0.9256, IoU.myocardium: 0.8587, IoU.left ventricle cavity: 0.9101, Acc.right ventricle cavity: 0.9879, Acc.myocardium: 0.8885, Acc.left ventricle cavity: 0.9715, Prec.right ventricle cavity: 0.9362, Prec.myocardium: 0.9624, Prec.left ventricle cavity: 0.9351, Dice.right ventricle cavity: 0.9614, Dice.myocardium: 0.9240, Dice.left ventricle cavity: 0.9529
+2025-08-12 08:56:26,861 - mmseg - INFO - Iter [27550/80000]	lr: 6.871e-05, eta: 1 day, 20:26:49, time: 3.272, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0011, decode.acc_seg: 5.2185, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1325, loss: 0.0026
+2025-08-12 08:59:34,896 - mmseg - INFO - Saving checkpoint at 27600 iterations
+2025-08-12 08:59:38,856 - mmseg - INFO - Iter [27600/80000]	lr: 6.865e-05, eta: 1 day, 20:25:31, time: 3.840, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3610, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2744, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 18.5 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 37.0 task/s, elapsed: 0s, ETA:     0s[>>>>                             ] 3/20, 55.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 52.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 65.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 78.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 73.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 84.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 94.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 81.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 89.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 98.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 91.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 98.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 105.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 98.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 104.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 110.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 105.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 110.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 116.1 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 08:59:39,155 - mmseg - INFO - per class results:
+2025-08-12 08:59:39,155 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity |  92.7 |  98.8 | 93.76 | 96.21 |
+|       myocardium       | 85.97 | 88.89 | 96.32 | 92.46 |
+| left ventricle cavity  | 91.01 | 97.22 | 93.44 | 95.29 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 08:59:39,156 - mmseg - INFO - Summary:
+2025-08-12 08:59:39,156 - mmseg - INFO - 
++-------+------+-------+-------+-------+
+|  aAcc | mIoU |  mAcc | mPrec | mDice |
++-------+------+-------+-------+-------+
+| 94.54 | 89.9 | 94.97 | 94.51 | 94.65 |
++-------+------+-------+-------+-------+
+2025-08-12 08:59:39,157 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9454, mIoU: 0.8990, mAcc: 0.9497, mPrec: 0.9451, mDice: 0.9465, IoU.right ventricle cavity: 0.9270, IoU.myocardium: 0.8597, IoU.left ventricle cavity: 0.9101, Acc.right ventricle cavity: 0.9880, Acc.myocardium: 0.8889, Acc.left ventricle cavity: 0.9722, Prec.right ventricle cavity: 0.9376, Prec.myocardium: 0.9632, Prec.left ventricle cavity: 0.9344, Dice.right ventricle cavity: 0.9621, Dice.myocardium: 0.9246, Dice.left ventricle cavity: 0.9529
+2025-08-12 09:03:30,022 - mmseg - INFO - Iter [27650/80000]	lr: 6.859e-05, eta: 1 day, 20:25:27, time: 4.623, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.3351, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.2465, loss: 0.0026
+2025-08-12 09:06:14,606 - mmseg - INFO - Saving checkpoint at 27700 iterations
+2025-08-12 09:06:18,639 - mmseg - INFO - Iter [27700/80000]	lr: 6.853e-05, eta: 1 day, 20:23:24, time: 3.372, data_time: 2.134, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.6738, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.5859, loss: 0.0027
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.7 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.3 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 49.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 46.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 58.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 69.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 62.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 70.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 79.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 69.9 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 76.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 83.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 75.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 80.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 86.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 78.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 83.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 88.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 81.5 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 85.8 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 90.1 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 09:06:18,997 - mmseg - INFO - per class results:
+2025-08-12 09:06:18,997 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.43 | 98.83 | 93.46 | 96.07 |
+|       myocardium       | 85.68 | 88.51 |  96.4 | 92.29 |
+| left ventricle cavity  | 90.97 |  97.3 | 93.32 | 95.27 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 09:06:18,998 - mmseg - INFO - Summary:
+2025-08-12 09:06:18,999 - mmseg - INFO - 
++-------+-------+-------+-------+-------+
+|  aAcc |  mIoU |  mAcc | mPrec | mDice |
++-------+-------+-------+-------+-------+
+| 94.43 | 89.69 | 94.88 | 94.39 | 94.54 |
++-------+-------+-------+-------+-------+
+2025-08-12 09:06:18,999 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9443, mIoU: 0.8969, mAcc: 0.9488, mPrec: 0.9439, mDice: 0.9454, IoU.right ventricle cavity: 0.9243, IoU.myocardium: 0.8568, IoU.left ventricle cavity: 0.9097, Acc.right ventricle cavity: 0.9883, Acc.myocardium: 0.8851, Acc.left ventricle cavity: 0.9730, Prec.right ventricle cavity: 0.9346, Prec.myocardium: 0.9640, Prec.left ventricle cavity: 0.9332, Dice.right ventricle cavity: 0.9607, Dice.myocardium: 0.9229, Dice.left ventricle cavity: 0.9527
+2025-08-12 09:08:54,063 - mmseg - INFO - Iter [27750/80000]	lr: 6.847e-05, eta: 1 day, 20:20:57, time: 3.109, data_time: 2.139, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.1964, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1080, loss: 0.0026
+2025-08-12 09:11:33,856 - mmseg - INFO - Saving checkpoint at 27800 iterations
+2025-08-12 09:11:37,831 - mmseg - INFO - Iter [27800/80000]	lr: 6.842e-05, eta: 1 day, 20:18:45, time: 3.275, data_time: 2.137, memory: 11958, decode.loss_ce: 0.0011, decode.acc_seg: 5.2429, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.1536, loss: 0.0026
+[                                                  ] 0/20, elapsed: 0s, ETA:[>                                ] 1/20, 16.8 task/s, elapsed: 0s, ETA:     1s[>>>                              ] 2/20, 33.5 task/s, elapsed: 0s, ETA:     1s[>>>>                             ] 3/20, 50.2 task/s, elapsed: 0s, ETA:     0s[>>>>>>                           ] 4/20, 45.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>                         ] 5/20, 56.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>                        ] 6/20, 67.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>                      ] 7/20, 59.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>                    ] 8/20, 67.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>                   ] 9/20, 76.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>                ] 10/20, 67.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>               ] 11/20, 74.4 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>             ] 12/20, 81.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>            ] 13/20, 77.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>          ] 14/20, 83.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>        ] 15/20, 89.6 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>       ] 16/20, 85.7 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>     ] 17/20, 91.0 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>    ] 18/20, 96.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ] 19/20, 92.3 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 20/20, 97.1 task/s, elapsed: 0s, ETA:     0s[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>] 21/20, 102.0 task/s, elapsed: 0s, ETA:     0s
+
+2025-08-12 09:11:38,166 - mmseg - INFO - per class results:
+2025-08-12 09:11:38,167 - mmseg - INFO - 
++------------------------+-------+-------+-------+-------+
+|         Class          |  IoU  |  Acc  |  Prec |  Dice |
++------------------------+-------+-------+-------+-------+
+| right ventricle cavity | 92.14 | 98.89 | 93.11 | 95.91 |
+|       myocardium       | 85.35 | 88.12 | 96.45 |  92.1 |
+| left ventricle cavity  |  90.9 | 97.32 | 93.23 | 95.23 |
++------------------------+-------+-------+-------+-------+
+2025-08-12 09:11:38,168 - mmseg - INFO - Summary:
+2025-08-12 09:11:38,170 - mmseg - INFO - 
++------+-------+-------+-------+-------+
+| aAcc |  mIoU |  mAcc | mPrec | mDice |
++------+-------+-------+-------+-------+
+| 94.3 | 89.46 | 94.78 | 94.26 | 94.41 |
++------+-------+-------+-------+-------+
+2025-08-12 09:11:38,171 - mmseg - INFO - Iter(val) [7]	aAcc: 0.9430, mIoU: 0.8946, mAcc: 0.9478, mPrec: 0.9426, mDice: 0.9441, IoU.right ventricle cavity: 0.9214, IoU.myocardium: 0.8535, IoU.left ventricle cavity: 0.9090, Acc.right ventricle cavity: 0.9889, Acc.myocardium: 0.8812, Acc.left ventricle cavity: 0.9732, Prec.right ventricle cavity: 0.9311, Prec.myocardium: 0.9645, Prec.left ventricle cavity: 0.9323, Dice.right ventricle cavity: 0.9591, Dice.myocardium: 0.9210, Dice.left ventricle cavity: 0.9523
+2025-08-12 09:14:20,736 - mmseg - INFO - Iter [27850/80000]	lr: 6.836e-05, eta: 1 day, 20:16:31, time: 3.258, data_time: 2.135, memory: 11958, decode.loss_ce: 0.0012, decode.acc_seg: 5.5253, aux_identity.loss_ce: 0.0015, aux_identity.acc_seg: 5.4369, loss: 0.0027

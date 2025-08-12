@@ -41,41 +41,34 @@ def _safe_join(base, rel):
     return rel if osp.isabs(rel) else osp.join(base, rel)
 
 def _get_img_ann_paths(dataset, idx):
-    """mmseg dataset의 img_infos에서 (이미지경로, 라벨경로) 추출."""
     info = dataset.img_infos[idx]
 
-    # --- 이미지 상대경로 추출 ---
-    if 'filename' in info:
-        rel_img = info['filename']
-    elif 'img_info' in info and isinstance(info['img_info'], dict):
-        rel_img = info['img_info'].get('filename')
-    elif 'img' in info:
-        rel_img = info['img']
+    # --- image ---
+    img_info = info.get('img_info', {})
+    rel_img = img_info.get('filename') or info.get('filename')
+    img_prefix = img_info.get('img_prefix') or getattr(dataset, 'img_dir', None) or getattr(dataset, 'img_prefix', None)
+    if rel_img is None:
+        img_path = None
+    elif osp.isabs(rel_img):
+        img_path = rel_img
+    elif img_prefix:
+        img_path = osp.join(img_prefix, rel_img)
     else:
-        rel_img = None
+        img_path = rel_img
 
-    # --- 라벨 상대경로 추출 ---
-    rel_ann = None
-    if 'ann' in info and isinstance(info['ann'], dict):
-        rel_ann = info['ann'].get('seg_map')
-    elif 'ann_info' in info and isinstance(info['ann_info'], dict):
-        rel_ann = info['ann_info'].get('seg_map')
+    # --- label ---
+    ann_info = info.get('ann_info', {})
+    rel_ann = ann_info.get('seg_map')
+    ann_prefix = ann_info.get('seg_prefix') or getattr(dataset, 'ann_dir', None)
+    if rel_ann is None:
+        ann_path = None
+    elif osp.isabs(rel_ann):
+        ann_path = rel_ann
+    elif ann_prefix:
+        ann_path = osp.join(ann_prefix, rel_ann)
+    else:
+        ann_path = rel_ann
 
-    img_base = getattr(dataset, 'img_dir', None) or getattr(dataset, 'img_prefix', None)
-    ann_base = getattr(dataset, 'ann_dir', None)
-
-    # 이미 base 접두가 rel에 포함돼 있으면 중복 조인 방지
-    def _resolve(base, rel):
-        if rel is None:
-            return None
-        if osp.isabs(rel):
-            return rel
-        if base and rel.startswith(base):
-            return rel
-        return _safe_join(base, rel)
-
-    img_path = _resolve(img_base, rel_img)
-    ann_path = _resolve(ann_base, rel_ann)
     return img_path, ann_path
 
 def _stripe_score(a):

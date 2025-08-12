@@ -5,10 +5,5 @@ work_dirs
 *.pth
 data
 *.pt
-vis
-vis_btcv
-vis_btcv_10
-vis_btcv_color
-vis_btcv_color_10
-vis_btcv_visual
-vis_btcv_visual_10
+vis*/
+vis_*/

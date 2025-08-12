@@ -1,126 +1,119 @@
-# save as: find_best_iter.py
+# find_best_iter.py
 import argparse, re, sys
 from pathlib import Path
 
-# ---- regex patterns (좀 더 관대하게) ----
-RE_TRAIN_ITER = re.compile(r"Iter\s*\[(\d+)\s*/\s*(\d+)\]")                 # Iter [21400/80000]
-RE_SAVE_ITER  = re.compile(r"Saving checkpoint at\s+(\d+)\s+iterations")    # Saving checkpoint at 21400 iterations
-RE_EVAL_LINE  = re.compile(r"Iter\(val\)\s*\[\d+\].*?mIoU:\s*([0-9.]+)")    # mIoU: 0.9032
-RE_SUMMARY_HDR = re.compile(r"^\|\s*aAcc\s*\|\s*mIoU\s*\|\s*mAcc\s*\|\s*mPrec\s*\|\s*mDice\s*\|")
-RE_SUMMARY_VAL = re.compile(
-    r"^\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|"
+RE_TRAIN_ITER = re.compile(r"Iter\s*\[(\d+)\s*/\s*(\d+)\]")
+RE_SAVE_ITER  = re.compile(r"Saving checkpoint at\s+(\d+)\s+iterations")
+RE_VAL_LINE   = re.compile(
+    r"Iter\(val\)\s*\[\d+\].*?aAcc:\s*([0-9.]+),\s*mIoU:\s*([0-9.]+),\s*mAcc:\s*([0-9.]+),\s*mPrec:\s*([0-9.]+),\s*mDice:\s*([0-9.]+)"
 )
+RE_SUMMARY_HDR = re.compile(r"^\|\s*aAcc\s*\|\s*mIoU\s*\|\s*mAcc\s*\|\s*mPrec\s*\|\s*mDice\s*\|")
+RE_SUMMARY_VAL = re.compile(r"^\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|\s*([0-9.]+)\s*\|")
 
 def parse_log(path: Path):
-    """return list of dicts: [{'iter':21900,'miou':90.15,'mdice':94.79}, ...]"""
     recs = []
-    last_iter = None           # 직전 학습 이터
-    pending_idx = None         # 방금 추가한 evaluation 레코드 인덱스
-    want_summary_values = False
+    last_iter = None
+    pending_idx = None
+    wait_summary = False
 
     with path.open('r', errors='ignore') as f:
         for raw in f:
             line = raw.rstrip("\n")
 
-            # 1) 학습 iteration 갱신
+            # 학습 이터레이션 → 현재 iter 갱신 + pending 무효화
             m = RE_TRAIN_ITER.search(line)
             if m:
                 last_iter = int(m.group(1))
+                pending_idx = None
+                wait_summary = False
                 continue
             m = RE_SAVE_ITER.search(line)
             if m:
                 last_iter = int(m.group(1))
+                pending_idx = None
+                wait_summary = False
                 continue
 
-            # 2) 평가 라인 (mIoU 0~1 범위) → %로
-            m = RE_EVAL_LINE.search(line)
+            # Iter(val) 라인: 즉시 레코드 추가(0~1 → % 변환)
+            m = RE_VAL_LINE.search(line)
             if m:
-                miou_pct = float(m.group(1)) * 100.0
-                recs.append({'iter': last_iter, 'miou': miou_pct, 'mdice': None})
+                _, miou, _, _, mdice = m.groups()
+                recs.append({
+                    'iter': last_iter,
+                    'miou': float(miou) * 100.0,
+                    'mdice': float(mdice) * 100.0,
+                })
                 pending_idx = len(recs) - 1
-                # Summary 값도 곧 나올 가능성이 높으니 대기 상태 진입
-                # (헤더를 보지 못하더라도 값 줄만 잡으면 매칭)
+                # 표가 뒤따르면 덮어쓸 준비
                 continue
 
-            # 3-a) Summary 헤더를 보면 값 줄을 기다린다
             if RE_SUMMARY_HDR.match(line):
-                want_summary_values = True
+                wait_summary = True
                 continue
 
-            # 3-b) Summary 값 줄을 찾을 때까지 계속 대기 (구분선/공백은 스킵)
-            if want_summary_values:
+            if wait_summary:
                 mv = RE_SUMMARY_VAL.match(line.strip())
                 if mv:
-                    # 순서: aAcc, mIoU, mAcc, mPrec, mDice
-                    miou_pct = float(mv.group(2))
+                    # 표는 이미 % 단위
+                    miou_pct  = float(mv.group(2))
                     mdice_pct = float(mv.group(5))
-                    if pending_idx is not None:
-                        # 앞서 읽은 Iter(val) 레코드에 채워넣기
-                        recs[pending_idx]['miou'] = recs[pending_idx]['miou'] or miou_pct
-                        recs[pending_idx]['mdice'] = mdice_pct
-                        pending_idx = None
-                    else:
-                        # 혹시 Iter(val) 라인이 없었으면 새로 추가
-                        recs.append({'iter': last_iter, 'miou': miou_pct, 'mdice': mdice_pct})
-                    want_summary_values = False
-                # 값 줄이 아니면 계속 기다림 (구분선/빈 줄 등)
-                continue
 
+                    if (pending_idx is not None and
+                        recs[pending_idx]['iter'] == last_iter):
+                        # 같은 iter의 표라면 덮어쓰기
+                        recs[pending_idx]['miou']  = miou_pct
+                        recs[pending_idx]['mdice'] = mdice_pct
+                    else:
+                        # 다른 iter(혹은 pending 없음)면 새 레코드
+                        recs.append({'iter': last_iter, 'miou': miou_pct, 'mdice': mdice_pct})
+
+                    pending_idx = None
+                    wait_summary = False
+                continue
     return recs
 
+def better(curr, score, it):
+    cs, ci, _ = curr
+    if score > cs: return True
+    if abs(score - cs) < 1e-9 and (it or -1) > (ci or -1): return True
+    return False
+
 def scan(target: Path):
-    files = []
-    if target.is_dir():
-        files = [p for p in target.rglob("*") if p.is_file() and p.suffix in {".log", ".txt"}]
-    else:
-        files = [target]
+    files = [target] if target.is_file() else [p for p in target.rglob('*') if p.suffix in {'.log', '.txt'}]
+    files.sort()
 
-    overall = {'miou': (-1.0, None, None), 'mdice': (-1.0, None, None)}  # (score, iter, file)
+    overall_miou  = (-1.0, None, None)
+    overall_mdice = (-1.0, None, None)
 
-    for f in sorted(files):
+    for f in files:
         recs = parse_log(f)
         if not recs:
             print(f"\n=== {f} ===\n(no eval records found)")
             continue
 
-        best_miou  = max(
-                        (r for r in recs if r['miou'] is not None),
-                        key=lambda x: (x['miou'], x['iter'] if x['iter'] is not None else -1),
-                        default=None,
-                    )
-        best_mdice = max(
-            (r for r in recs if r['mdice'] is not None),
-            key=lambda x: (x['mdice'], x['iter'] if x['iter'] is not None else -1),
-            default=None,
-        )
+        # 파일 내 최고(동률이면 더 큰 iter)
+        best_miou  = max(recs, key=lambda r: (round(r['miou'], 6),  r['iter'] if r['iter'] is not None else -1))
+        best_mdice = max(recs, key=lambda r: (round(r['mdice'], 6), r['iter'] if r['iter'] is not None else -1))
+
         print(f"\n=== {f} ===")
-    
-    def _better(curr_tuple, new_score, new_iter):
-        """curr_tuple = (score, iter, file). 점수 동점이면 더 큰 iter가 better."""
-        cur_score, cur_iter, _ = curr_tuple
-        if new_score > cur_score:
-            return True
-        if abs(new_score - cur_score) < 1e-12 and (new_iter or -1) > (cur_iter or -1):
-            return True
-        return False
+        print(f"[Best mIoU ] {best_miou['miou']:.2f}% @ iter {best_miou['iter']}")
+        print(f"[Best mDice] {best_mdice['mdice']:.2f}% @ iter {best_mdice['iter']}")
 
-    if best_miou and _better(overall['miou'], best_miou['miou'], best_miou['iter']):
-        overall['miou'] = (best_miou['miou'], best_miou['iter'], f)
-
-    if best_mdice and _better(overall['mdice'], best_mdice['mdice'], best_mdice['iter']):
-        overall['mdice'] = (best_mdice['mdice'], best_mdice['iter'], f)
+        if better(overall_miou, best_miou['miou'], best_miou['iter']):
+            overall_miou = (best_miou['miou'], best_miou['iter'], f)
+        if better(overall_mdice, best_mdice['mdice'], best_mdice['iter']):
+            overall_mdice = (best_mdice['mdice'], best_mdice['iter'], f)
 
     print("\n=== OVERALL BEST ===")
-    miou_score, miou_iter, miou_file = overall['miou']
-    mdice_score, mdice_iter, mdice_file = overall['mdice']
-    print(f"mIoU : {miou_score:.2f}% @ iter {miou_iter} (file: {miou_file})" if miou_iter is not None else "mIoU : not found")
-    print(f"mDice: {mdice_score:.2f}% @ iter {mdice_iter} (file: {mdice_file})" if mdice_iter is not None else "mDice: not found")
+    miou_s, miou_i, miou_f = overall_miou
+    mdice_s, mdice_i, mdice_f = overall_mdice
+    print(f"mIoU : {miou_s:.2f}% @ iter {miou_i} (file: {miou_f})" if miou_i is not None else "mIoU : not found")
+    print(f"mDice: {mdice_s:.2f}% @ iter {mdice_i} (file: {mdice_f})" if mdice_i is not None else "mDice: not found")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("path", help="로그 파일(.log/.txt) 또는 디렉터리")
-    args = ap.parse_args()
-    p = Path(args.path)
+    p = Path(ap.parse_args().path)
     if not p.exists():
         print(f"Not found: {p}", file=sys.stderr); sys.exit(1)
     scan(p)
