@@ -103,13 +103,14 @@ def main():
     ap.add_argument("--data_root", default="data/ACDC")
     # ⬇ 여러 개 split 파일을 받을 수 있도록 nargs="+"
     ap.add_argument("--train_split", nargs="+",
-                    default=["data/ACDC/splits/train.txt"],
+                    default=["data/ACDC/splits/train.txt", "data/ACDC/splits/train_10.txt"],
                     help="One or more training split files.")
     ap.add_argument("--val_split", nargs="+",
-                    default=["data/ACDC/splits/val.txt"],
-                    help="One or more validation split files.")
+                    default=["data/ACDC/splits/val.txt", "data/ACDC/splits/test.txt"],
+                    help="One or more validation, testing split files.")
     ap.add_argument("--img_dir_train", default="training")
-    ap.add_argument("--img_dir_val", default="testing")
+    ap.add_argument("--img_dir_val", default="training")
+    ap.add_argument("--img_dir_test", default="training")
     ap.add_argument("--seg_suffix", default="_gt.nii.gz")
     ap.add_argument("--mode", choices=["middle", "all"], default="middle",
                     help="middle slice only or all slices")
