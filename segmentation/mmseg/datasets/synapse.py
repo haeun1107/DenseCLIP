@@ -57,6 +57,27 @@ class SynapseNiftiDataset(CustomDataset):
               f'slices(with label): {len(data_infos)}')
         return data_infos
 
+    def get_gt_seg_maps(self, efficient_test=False):
+        gts = []
+        for i in range(len(self.img_infos)):
+            ann = self.get_ann_info(i)
+            seg_rel = ann['seg_map']
+            z = ann['z_index']
+
+            # seg_map에 이미 프리픽스가 들어있으면 그대로 쓰고,
+            # 아니면 ann_dir를 붙입니다.
+            if osp.isabs(seg_rel) or seg_rel.startswith(self.ann_dir):
+                seg_path = seg_rel
+            else:
+                seg_path = osp.join(self.ann_dir, seg_rel)
+
+            lab = np.asanyarray(nib.load(seg_path).get_fdata()).astype(np.int32)[..., z]
+            zero = (lab == 0)
+            lab = lab - 1
+            lab[zero] = 255
+            gts.append(lab.astype(np.uint8))
+        return gts
+
     # CustomDataset 기본 prepare_* 는 prefix를 붙여 사용할 수 있게 설계되어 있음.
     # 우리는 filename/seg_map에 "완전한 경로"를 넣었으므로 prefix가 끼어들지 않게 오버라이드.
     def prepare_train_img(self, idx):
