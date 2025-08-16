@@ -4,6 +4,7 @@ import numpy as np
 from scipy.sparse import load_npz
 from .builder import DATASETS
 from .custom import CustomDataset
+import os
 
 @DATASETS.register_module()
 class BTCVDataset(CustomDataset):

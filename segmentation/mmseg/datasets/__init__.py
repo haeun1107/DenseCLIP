@@ -19,6 +19,7 @@ from .voc import PascalVOCDataset
 from .web_image import WebImageDataset
 from .maskclip_demo import MaskCLIPDemoDataset
 from .acdc import ACDCDataset
+from .synapse import SynapseNiftiDataset
 
 __all__ = [
     'CustomDataset', 'build_dataloader', 'ConcatDataset', 'RepeatDataset',
@@ -27,5 +28,5 @@ __all__ = [
     'PascalContextDataset59', 'ChaseDB1Dataset', 'DRIVEDataset', 'HRFDataset',
     'STAREDataset', 'DarkZurichDataset', 'NightDrivingDataset',
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
-    'PotsdamDataset', 'WebImageDataset', 'MaskCLIPDemoDataset', 'ACDCDataset'
+    'PotsdamDataset', 'WebImageDataset', 'MaskCLIPDemoDataset', 'ACDCDataset', 'SynapseNiftiDataset'
 ]

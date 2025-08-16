@@ -1,4 +1,3 @@
-# parse_mmseg_val_log_percent_k.py
 import re
 import csv
 import argparse
@@ -26,13 +25,19 @@ def parse_log(log_path):
 
             m_val = VAL_RE.search(line)
             if m_val and last_iter is not None:
+                # ✅ 1000 단위가 아니면 스킵
+                if last_iter % 1000 != 0:
+                    last_iter = None
+                    continue
+
                 mIoU  = float(m_val.group(1)) * 100
                 mDice = float(m_val.group(2)) * 100
-                iter_k = f"{last_iter//1000}K"  # 1000 단위로 K 표기
+                iter_k = f"{last_iter // 1000}K"
                 results[iter_k] = (mIoU, mDice)
                 last_iter = None
 
-    return OrderedDict(sorted(results.items(), key=lambda x: int(x[0].replace('K',''))))
+    # 정렬
+    return OrderedDict(sorted(results.items(), key=lambda x: int(x[0][:-1])))
 
 def save_csv(ordered_results, out_csv):
     with open(out_csv, 'w', newline='') as f:
@@ -49,7 +54,7 @@ if __name__ == "__main__":
 
     res = parse_log(args.log_path)
     if not res:
-        print("No (Iter,val) lines found.")
+        print("No 1K-step (Iter,val) lines found.")
     else:
         save_csv(res, args.out)
         print(f"Saved {len(res)} rows to {args.out}")
