@@ -1,0 +1,58 @@
+_base_ = [
+    '_base_/models/denseclip_r50.py',
+    '_base_/datasets/brats.py',   
+    '_base_/default_runtime.py',
+    '_base_/schedules/schedule_80k.py'
+]
+
+custom_imports = dict(
+    imports=[
+        'mmseg.datasets.brats',
+        'mmseg.datasets.pipelines.load_brats_slice',
+    ],
+    allow_failed_imports=False
+)
+
+num_classes = 4  # background 포함 (0:bg, 1:NCR/NET, 2:ED, 3:ET[4→3])
+
+model = dict(
+    type='DenseCLIP',
+    pretrained='segmentation/pretrained/RN50.pt',
+    context_length=12,
+    text_head=False,
+    backbone=dict(
+        type='CLIPResNetWithAttention',
+        layers=[3, 4, 6, 3],
+        output_dim=1024,
+        input_resolution=512,
+        style='pytorch'),
+    text_encoder=dict(
+        type='CLIPTextContextEncoder',
+        context_length=16, embed_dim=1024,
+        transformer_width=512, transformer_heads=8, transformer_layers=12,
+        style='pytorch'),
+    context_decoder=dict(
+        type='ContextDecoder',
+        transformer_width=256, transformer_heads=4, transformer_layers=3,
+        visual_dim=1024, dropout=0.1, outdim=1024, style='pytorch'),
+    # ★ 클래스 수만 맞추면 됨. (우리 구현은 C5에 +num_classes 채널 concat)
+    neck=dict(
+        type='FPN',
+        in_channels=[256, 512, 1024, 2048 + num_classes],
+        out_channels=256, num_outs=4),
+    decode_head=dict(
+        type='FPNHead',
+        num_classes=num_classes,        # ★ 4
+        loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
+    ),
+)
+
+lr_config = dict(policy='poly', power=0.9, min_lr=1e-6, by_epoch=False,
+                 warmup='linear', warmup_iters=1500, warmup_ratio=1e-6)
+optimizer = dict(type='AdamW', lr=1e-4, weight_decay=1e-4,
+    paramwise_cfg=dict(custom_keys={'backbone': dict(lr_mult=0.1),
+                                    'text_encoder': dict(lr_mult=0.0),
+                                    'norm': dict(decay_mult=0.)}))
+data = dict(samples_per_gpu=4)
+evaluation = dict(metric=['mIoU', 'mDice'])  # background 포함된 클래스 전부 평가
+device = 'cuda'

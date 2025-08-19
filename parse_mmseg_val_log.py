@@ -26,18 +26,20 @@ def parse_log(log_path):
             m_val = VAL_RE.search(line)
             if m_val and last_iter is not None:
                 # ✅ 1000 단위가 아니면 스킵
-                if last_iter % 1000 != 0:
+                if last_iter % 800 != 0:
                     last_iter = None
                     continue
 
                 mIoU  = float(m_val.group(1)) * 100
                 mDice = float(m_val.group(2)) * 100
-                iter_k = f"{last_iter // 1000}K"
+                iter_k = f"{last_iter/1000:.1f}K"
                 results[iter_k] = (mIoU, mDice)
                 last_iter = None
 
     # 정렬
-    return OrderedDict(sorted(results.items(), key=lambda x: int(x[0][:-1])))
+    return OrderedDict(
+        sorted(results.items(), key=lambda x: float(x[0][:-1]))
+    )
 
 def save_csv(ordered_results, out_csv):
     with open(out_csv, 'w', newline='') as f:

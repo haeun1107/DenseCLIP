@@ -1,8 +1,8 @@
-dataset_type = 'SynapseNiftiDataset'
-data_root = 'data/synapse'   # <- 네 폴더에 맞춰 조정
+# configs/_base_/datasets/brats.py
+dataset_type = 'BraTSNiftiDataset'
+data_root = 'data/BraTS' 
 
-# 이미 파이프라인에서 CT 윈도잉 후 [0,255] uint8로 만들어서
-# 여기 Normalize는 CLIP 사전학습 통계(이미 사용 중)를 그대로 사용 가능
+# CLIP 통계 그대로 사용 (입력은 0~255 uint8로 변환 후 Normalize)
 img_norm_cfg = dict(mean=[123.675, 116.28, 103.53],
                     std=[58.395, 57.12, 57.375],
                     to_rgb=True)
@@ -10,8 +10,10 @@ img_norm_cfg = dict(mean=[123.675, 116.28, 103.53],
 crop_size = (512, 512)
 
 train_pipeline = [
-    dict(type='LoadNiftiSliceImage', window_min=-350.0, window_max=350.0),
-    dict(type='LoadNiftiSliceAnnotations', reduce_zero_label=True),  # 0->255 ignore, 1..13->0..12
+    # FLAIR만 읽어서 percentile(1,99) 정규화 → uint8 → 3채널 복제
+    dict(type='LoadBraTSSliceImage', modality='flair'),
+    # seg에서 4→3 리맵, background 포함 (reduce_zero_label=False)
+    dict(type='LoadBraTSSliceAnnotations', reduce_zero_label=False, map_4_to_3=True),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -23,15 +25,13 @@ train_pipeline = [
 ]
 
 test_pipeline = [
-    dict(type='LoadNiftiSliceImage', window_min=-350.0, window_max=350.0),
-    #dict(type='LoadNiftiSliceAnnotations', reduce_zero_label=True),
+    dict(type='LoadBraTSSliceImage', modality='flair'),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(512, 512),
         flip=False,
         transforms=[
             dict(type='Resize', keep_ratio=True),
-            dict(type='RandomFlip'),
             dict(type='Normalize', **img_norm_cfg),
             dict(type='ImageToTensor', keys=['img']),
             dict(type='Collect', keys=['img']),
@@ -44,28 +44,31 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='train/CT',
-        ann_dir='train/GT',
+        img_dir='dataset',   
+        ann_dir='dataset',
         split='splits/train.txt',
-        img_suffix='.nii.gz',
-        seg_map_suffix='.nii.gz',
-        pipeline=train_pipeline),
+        img_suffix='_flair.nii',    
+        seg_map_suffix='_seg.nii',
+        pipeline=train_pipeline,
+    ),
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='val/CT',
-        ann_dir='val/GT',
-        split='splits/test.txt',
-        img_suffix='.nii.gz',
-        seg_map_suffix='.nii.gz',
-        pipeline=test_pipeline),
+        img_dir='dataset',
+        ann_dir='dataset',
+        split='splits/val.txt',
+        img_suffix='_flair.nii',    
+        seg_map_suffix='_seg.nii',
+        pipeline=test_pipeline,
+    ),
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='val/CT',
-        ann_dir='val/GT',
+        img_dir='dataset',
+        ann_dir='dataset',
         split='splits/test.txt',
-        img_suffix='.nii.gz',
-        seg_map_suffix='.nii.gz',
-        pipeline=test_pipeline),
+        img_suffix='_flair.nii',    
+        seg_map_suffix='_seg.nii',
+        pipeline=test_pipeline,
+    ),
 )
