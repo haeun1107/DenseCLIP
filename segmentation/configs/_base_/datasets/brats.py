@@ -11,7 +11,7 @@ crop_size = (512, 512)
 
 train_pipeline = [
     # FLAIR만 읽어서 percentile(1,99) 정규화 → uint8 → 3채널 복제
-    dict(type='LoadBraTSSliceImage', modality='flair'),
+    dict(type='LoadBraTSSliceImage'),
     # seg에서 4→3 리맵, background 포함 (reduce_zero_label=False)
     dict(type='LoadBraTSSliceAnnotations', reduce_zero_label=False, map_4_to_3=True),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
@@ -25,7 +25,7 @@ train_pipeline = [
 ]
 
 test_pipeline = [
-    dict(type='LoadBraTSSliceImage', modality='flair'),
+    dict(type='LoadBraTSSliceImage'),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(512, 512),
@@ -50,6 +50,7 @@ data = dict(
         img_suffix='_flair.nii',    
         seg_map_suffix='_seg.nii',
         pipeline=train_pipeline,
+        use_label_only_slices=False
     ),
     val=dict(
         type=dataset_type,
@@ -60,6 +61,7 @@ data = dict(
         img_suffix='_flair.nii',    
         seg_map_suffix='_seg.nii',
         pipeline=test_pipeline,
+        use_label_only_slices=False
     ),
     test=dict(
         type=dataset_type,
@@ -70,5 +72,6 @@ data = dict(
         img_suffix='_flair.nii',    
         seg_map_suffix='_seg.nii',
         pipeline=test_pipeline,
+        use_label_only_slices=False
     ),
 )

@@ -77,3 +77,34 @@ class BraTSNiftiDataset(CustomDataset):
 
     def get_ann_info(self, idx):
         return self.img_infos[idx].get('ann_info', {})
+    
+    def get_gt_seg_maps(self, efficient_test=False):
+        """평가용 GT 슬라이스 로딩.
+        - load_annotations에서 저장한 절대경로(seg_map)를 그대로 사용
+        - BraTS 라벨 4 -> 3으로 리맵 (배경 0은 그대로)
+        """
+        gts = []
+        for i in range(len(self.img_infos)):
+            info = self.img_infos[i]
+            ann = info.get('ann_info', None)
+            if ann is None:
+                # 평가에 GT가 없는 경우는 보통 없음. 방어적으로 0맵을 넣고 continue
+                # (원한다면 raise로 바꿔도 됩니다)
+                img_path = info['img_info']['filename']
+                z = info['img_info']['z_index']
+                shape3d = nib.load(img_path).shape  # (H,W,S)
+                H, W = shape3d[0], shape3d[1]
+                gts.append(np.zeros((H, W), dtype=np.uint8))
+                continue
+
+            seg_path = ann['seg_map']          # 우리는 절대경로로 저장
+            z = ann.get('z_index', info['img_info']['z_index'])
+
+            lab3d = np.asanyarray(nib.load(seg_path).get_fdata()).astype(np.int32)
+            sl = lab3d[..., int(z)]
+
+            # BraTS 표준: 4(ET) -> 3
+            sl[sl == 4] = 3
+
+            gts.append(sl.astype(np.uint8))
+        return gts
