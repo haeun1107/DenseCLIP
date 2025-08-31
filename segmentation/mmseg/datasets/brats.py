@@ -15,7 +15,7 @@ class BraTSNiftiDataset(CustomDataset):
     """
 
     # background 포함 4클래스
-    CLASSES = ('background', 'NCR_NET', 'ED', 'ET')
+    CLASSES = ('background', 'Necrotic and Non-Enhancing Tumor Core', 'Peritumoral Edema', 'Enhancing Tumor')
     PALETTE = [[0,0,0], [255,0,0], [0,255,0], [0,0,255]]
 
     def __init__(self, split, use_label_only_slices=False, **kwargs):
