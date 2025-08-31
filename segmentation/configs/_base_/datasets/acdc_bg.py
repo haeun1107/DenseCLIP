@@ -48,6 +48,7 @@ data = dict(
         split='splits/val.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
+        ignore_index=0,
         pipeline=test_pipeline
     ),
     test=dict(
@@ -56,6 +57,7 @@ data = dict(
         split='splits/test.txt',
         img_suffix='.nii.gz', seg_map_suffix='_gt.nii.gz',
         slice_index=None,
+        ignore_index=0,
         pipeline=test_pipeline
     ),
 )
