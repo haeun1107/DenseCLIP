@@ -60,6 +60,7 @@ data = dict(
         split='splits/val.txt',
         img_suffix='_flair.nii',    
         seg_map_suffix='_seg.nii',
+        ignore_index=0,
         pipeline=test_pipeline,
         use_label_only_slices=False
     ),
@@ -71,6 +72,7 @@ data = dict(
         split='splits/test.txt',
         img_suffix='_flair.nii',    
         seg_map_suffix='_seg.nii',
+        ignore_index=0,
         pipeline=test_pipeline,
         use_label_only_slices=False
     ),
