@@ -21,6 +21,7 @@ from .maskclip_demo import MaskCLIPDemoDataset
 from .acdc import ACDCDataset
 from .synapse import SynapseNiftiDataset
 from .brats import BraTSNiftiDataset
+from .isic import ISICDataset
 
 __all__ = [
     'CustomDataset', 'build_dataloader', 'ConcatDataset', 'RepeatDataset',
@@ -29,5 +30,6 @@ __all__ = [
     'PascalContextDataset59', 'ChaseDB1Dataset', 'DRIVEDataset', 'HRFDataset',
     'STAREDataset', 'DarkZurichDataset', 'NightDrivingDataset',
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
-    'PotsdamDataset', 'WebImageDataset', 'MaskCLIPDemoDataset', 'ACDCDataset', 'SynapseNiftiDataset', 'BraTSNiftiDataset'
+    'PotsdamDataset', 'WebImageDataset', 'MaskCLIPDemoDataset', 'ACDCDataset', 'SynapseNiftiDataset', 'BraTSNiftiDataset',
+    'ISICDataset'
 ]
