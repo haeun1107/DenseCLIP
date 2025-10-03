@@ -22,6 +22,8 @@ from .acdc import ACDCDataset
 from .synapse import SynapseNiftiDataset
 from .brats import BraTSNiftiDataset
 from .isic import ISICDataset
+from .busi import BUSIDataset
+from .polyp import POLYPDataset
 
 __all__ = [
     'CustomDataset', 'build_dataloader', 'ConcatDataset', 'RepeatDataset',
@@ -31,5 +33,5 @@ __all__ = [
     'STAREDataset', 'DarkZurichDataset', 'NightDrivingDataset',
     'COCOStuffDataset', 'LoveDADataset', 'MultiImageMixDataset',
     'PotsdamDataset', 'WebImageDataset', 'MaskCLIPDemoDataset', 'ACDCDataset', 'SynapseNiftiDataset', 'BraTSNiftiDataset',
-    'ISICDataset'
+    'ISICDataset', 'BUSIDataset', 'POLYPDataset'
 ]

@@ -291,10 +291,10 @@ def eval_metrics(results,
                                         beta)
 
     # ignore_index는 평가에서 제외
-    if 0 <= ignore_index < num_classes:
-        for k in ['IoU', 'Acc', 'Prec', 'Dice', 'Fscore', 'Precision', 'Recall']:
-            if k in ret_metrics and ret_metrics[k].ndim == 1 and len(ret_metrics[k]) == num_classes:
-                ret_metrics[k][ignore_index] = np.nan
+    # if 0 <= ignore_index < num_classes:
+    #     for k in ['IoU', 'Acc', 'Prec', 'Dice', 'Fscore', 'Precision', 'Recall']:
+    #         if k in ret_metrics and ret_metrics[k].ndim == 1 and len(ret_metrics[k]) == num_classes:
+    #             ret_metrics[k][ignore_index] = np.nan
 
     return ret_metrics
 

@@ -397,74 +397,130 @@ class CustomDataset(Dataset):
             raise KeyError('metric {} is not supported'.format(metric))
 
         eval_results = {}
-        # test a list of files
-        if mmcv.is_list_of(results, np.ndarray) or mmcv.is_list_of(
-                results, str):
+
+        # ----- 1) metrics 계산 -----
+        if mmcv.is_list_of(results, np.ndarray) or mmcv.is_list_of(results, str):
             if gt_seg_maps is None:
                 gt_seg_maps = self.get_gt_seg_maps()
             num_classes = len(self.CLASSES)
             ret_metrics = eval_metrics(
-                results,
-                gt_seg_maps,
-                num_classes,
-                self.ignore_index,
-                metric,
+                results=results,
+                gt_seg_maps=gt_seg_maps,
+                num_classes=num_classes,
+                ignore_index=self.ignore_index,
+                metrics=metric,
                 label_map=self.label_map,
                 reduce_zero_label=self.reduce_zero_label)
-        # test a list of pre_eval_results
         else:
             ret_metrics = pre_eval_to_metrics(results, metric)
+            # pre_eval 경로에서는 num_classes를 직접 설정
+            num_classes = len(self.CLASSES)
 
         # Because dataset.CLASSES is required for per-eval.
-        if self.CLASSES is None:
-            class_names = tuple(range(num_classes))
-        else:
-            class_names = self.CLASSES
+        class_names = tuple(range(num_classes)) if self.CLASSES is None else self.CLASSES
+    
+        # ----- 2) 요약 평균에서만 BG 제외 -----
+        ig = self.ignore_index
+        valid = np.ones(num_classes, dtype=bool)
+        if 0 <= ig < num_classes:
+            valid[ig] = False   # ← 배경 제외
 
-        # summary table
-        ret_metrics_summary = OrderedDict({
-            ret_metric: np.round(np.nanmean(ret_metric_value) * 100, 2)
-            for ret_metric, ret_metric_value in ret_metrics.items()
-        })
+        # ret_metrics: {'aAcc': scalar, 'IoU': np.ndarray(C), 'Dice': np.ndarray(C), ...}
+        ret_metrics_summary = OrderedDict()
 
-        # each class table
-        ret_metrics.pop('aAcc', None)
-        ret_metrics_class = OrderedDict({
-            ret_metric: np.round(ret_metric_value * 100, 2)
-            for ret_metric, ret_metric_value in ret_metrics.items()
-        })
-        ret_metrics_class.update({'Class': class_names})
-        ret_metrics_class.move_to_end('Class', last=False)
+        # aAcc는 전체 픽셀 정확도이므로 그대로 사용
+        if 'aAcc' in ret_metrics:
+            ret_metrics_summary['aAcc'] = np.round(ret_metrics['aAcc'] * 100, 2)
 
-        # for logger
+        # per-class가 있는 항목은 valid 마스크로 평균
+        for key in ['IoU', 'Dice', 'Fscore', 'Acc', 'Prec', 'Precision', 'Recall']:
+            if key in ret_metrics:
+                vals = ret_metrics[key]
+                if isinstance(vals, np.ndarray) and vals.ndim == 1 and len(vals) == num_classes:
+                    ret_metrics_summary[key] = np.round(np.mean(vals[valid]) * 100, 2)
+                else:
+                    # 스칼라/기타는 안전하게 nanmean
+                    ret_metrics_summary[key] = np.round(np.nanmean(vals) * 100, 2)
+
+        # ----- 3) 클래스별 표 (표시는 그대로, 평균만 BG 제외됨) -----
+        ## 여기부터
+        show_idx = [i for i in range(num_classes) if not (0 <= ig < num_classes and i == ig)]
+        shown_class_names = [class_names[i] for i in show_idx]
+
+        ret_metrics_class = OrderedDict()
+        ret_metrics_class['Class'] = shown_class_names
+
+        for key in ['IoU', 'Acc', 'Prec', 'Dice', 'Fscore', 'Precision', 'Recall']:
+            if key in ret_metrics and isinstance(ret_metrics[key], np.ndarray) \
+            and ret_metrics[key].ndim == 1 and len(ret_metrics[key]) == num_classes:
+                ret_metrics_class[key] = np.round(ret_metrics[key][show_idx] * 100, 2)
+
+        # ----- 4) 로그 출력 -----
         class_table_data = PrettyTable()
         for key, val in ret_metrics_class.items():
             class_table_data.add_column(key, val)
 
         summary_table_data = PrettyTable()
         for key, val in ret_metrics_summary.items():
-            if key == 'aAcc':
-                summary_table_data.add_column(key, [val])
-            else:
-                summary_table_data.add_column('m' + key, [val])
+            summary_table_data.add_column('aAcc' if key == 'aAcc' else 'm' + key, [val])
 
         print_log('per class results:', logger)
         print_log('\n' + class_table_data.get_string(), logger=logger)
         print_log('Summary:', logger)
         print_log('\n' + summary_table_data.get_string(), logger=logger)
 
-        # each metric dict
+        # ----- 5) 반환 형식 -----
         for key, value in ret_metrics_summary.items():
-            if key == 'aAcc':
-                eval_results[key] = value / 100.0
-            else:
-                eval_results['m' + key] = value / 100.0
+            eval_results['aAcc' if key == 'aAcc' else 'm' + key] = value / 100.0
 
-        ret_metrics_class.pop('Class', None)
-        for key, value in ret_metrics_class.items():
-            eval_results.update({
-                key + '.' + str(name): value[idx] / 100.0
-                for idx, name in enumerate(class_names)
-            })
+        # per-class 값도 배경(ig) 제거 버전으로만 저장
+        for key in ['IoU', 'Acc', 'Prec', 'Dice', 'Fscore', 'Precision', 'Recall']:
+            if key in ret_metrics and isinstance(ret_metrics[key], np.ndarray) \
+            and ret_metrics[key].ndim == 1 and len(ret_metrics[key]) == num_classes:
+                arr = ret_metrics[key]
+                for cls_i, cls_name in zip(show_idx, shown_class_names):
+                    eval_results[f'{key}.{cls_name}'] = float(arr[cls_i])
 
         return eval_results
+        
+        # ret_metrics_no_acc = ret_metrics.copy()
+        # ret_metrics_no_acc.pop('aAcc', None)
+        # ret_metrics_class = OrderedDict({
+        #     k: np.round(v * 100, 2) for k, v in ret_metrics_no_acc.items()
+        #     if isinstance(v, np.ndarray) and v.ndim == 1 and len(v) == num_classes
+        # })
+        # ret_metrics_class.update({'Class': class_names})
+        # ret_metrics_class.move_to_end('Class', last=False)
+
+        # # ----- 4) 로그 출력 -----
+        # class_table_data = PrettyTable()
+        # for key, val in ret_metrics_class.items():
+        #     class_table_data.add_column(key, val)
+
+        # summary_table_data = PrettyTable()
+        # for key, val in ret_metrics_summary.items():
+        #     if key == 'aAcc':
+        #         summary_table_data.add_column(key, [val])
+        #     else:
+        #         summary_table_data.add_column('m' + key, [val])
+
+        # print_log('per class results:', logger)
+        # print_log('\n' + class_table_data.get_string(), logger=logger)
+        # print_log('Summary:', logger)
+        # print_log('\n' + summary_table_data.get_string(), logger=logger)
+
+        # # ----- 5) 딕셔너리 반환 형식 -----
+        # for key, value in ret_metrics_summary.items():
+        #     if key == 'aAcc':
+        #         eval_results[key] = value / 100.0
+        #     else:
+        #         eval_results['m' + key] = value / 100.0
+
+        # ret_metrics_class.pop('Class', None)
+        # for key, value in ret_metrics_class.items():
+        #     eval_results.update({
+        #         key + '.' + str(name): value[idx] / 100.0
+        #         for idx, name in enumerate(class_names)
+        #     })
+
+        # return eval_results

@@ -59,5 +59,5 @@ optimizer = dict(type='AdamW', lr=1e-4, weight_decay=1e-4,
                                     'text_encoder': dict(lr_mult=0.0),
                                     'norm': dict(decay_mult=0.)}))
 data = dict(samples_per_gpu=4)
-evaluation = dict(metric=['mIoU','mDice'])
+evaluation = dict(metric=['mIoU','mDice'], ignore_index=0, classwise=True)
 device = 'cuda'
