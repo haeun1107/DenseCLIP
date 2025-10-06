@@ -1,7 +1,7 @@
 # segmentation/configs/denseclip_fpn_res50_512x512_80k_acdc_bg.py
 _base_ = [
     '_base_/models/denseclip_r50.py',
-    '_base_/datasets/acdc_bg.py',
+    '_base_/datasets/acdc_A0.py',
     '_base_/default_runtime.py',
     '_base_/schedules/schedule_80k.py'
 ]
