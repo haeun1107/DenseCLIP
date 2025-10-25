@@ -1,56 +1,54 @@
 _base_ = [
     '_base_/models/denseclip_r50.py',
-    '_base_/datasets/synapse.py',  
+    '_base_/datasets/synapse_new.py',   # ← 우리가 만든 NPZ 데이터셋 설정
     '_base_/default_runtime.py',
     '_base_/schedules/schedule_80k.py'
 ]
 
+# 커스텀 모듈 등록
 custom_imports = dict(
     imports=[
-        'mmseg.datasets.synapse',
-        'mmseg.datasets.pipelines.load_npz_annotation',
+        'mmseg.datasets.synapse_new',       # SynapseNPZDataset, SynapseH5SliceDataset
+        'mmseg.datasets.pipelines.load_synapse_npz' # LoadSynapseNPZ
     ],
     allow_failed_imports=False
 )
 
-NUM_CLASSES = 14
+NUM_CLASSES = 9   # BG 포함(0) + 8 organs → 9
 
 model = dict(
     type='DenseCLIP',
     pretrained='segmentation/pretrained/RN50.pt',
-    context_length=12,
+    context_length=16,
     text_head=False,
     backbone=dict(
         type='CLIPResNetWithAttention',
-        layers=[3, 4, 6, 3],
+        layers=[3,4,6,3],
         output_dim=1024,
         input_resolution=512,
-        style='pytorch'),
+        style='pytorch'
+    ),
     text_encoder=dict(
         type='CLIPTextContextEncoder',
-        context_length=16,
-        embed_dim=1024,
-        transformer_width=512,
-        transformer_heads=8,
-        transformer_layers=12,
-        style='pytorch'),
+        context_length=24, # check 22,24 ~~
+        embed_dim=1024, 
+        transformer_width=512, transformer_heads=8,
+        transformer_layers=12, style='pytorch'
+    ),
     context_decoder=dict(
         type='ContextDecoder',
-        transformer_width=256,
-        transformer_heads=4,
-        transformer_layers=3,
-        visual_dim=1024,
-        dropout=0.1,
-        outdim=1024,
-        style='pytorch'),
+        transformer_width=256, transformer_heads=4,
+        transformer_layers=3, visual_dim=1024,
+        dropout=0.1, outdim=1024, style='pytorch'
+    ),
     neck=dict(
         type='FPN',
-        in_channels=[256, 512, 1024, 2048 + NUM_CLASSES],  # 14 organs, background excluded
-        out_channels=256,
-        num_outs=4),
+        in_channels=[256,512,1024,2048 + NUM_CLASSES],  # 2048+4
+        out_channels=256, num_outs=4
+    ),
     decode_head=dict(
         type='FPNHead',
-        num_classes=NUM_CLASSES,   # 장기 14
+        num_classes=NUM_CLASSES,
         loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
     ),
 )
