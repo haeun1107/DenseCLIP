@@ -12,6 +12,7 @@ from .load_nifti_annotation import LoadNiftiImageFromFile, LoadNiftiAnnotations
 from .load_nifti_slice import LoadNiftiSliceImage, LoadNiftiSliceAnnotations
 from .load_brats_slice import LoadBraTSSliceImage, LoadBraTSSliceAnnotations
 from .load_isic_annotation import LoadISICAnnotations
+from .load_synapse_npz import LoadSynapseNPZ
 
 __all__ = [
     'Compose', 'to_tensor', 'ToTensor', 'ImageToTensor', 'ToDataContainer',
@@ -20,5 +21,6 @@ __all__ = [
     'Normalize', 'SegRescale', 'PhotoMetricDistortion', 'RandomRotate',
     'AdjustGamma', 'CLAHE', 'Rerange', 'RGB2Gray', 'RandomCutOut',
     'RandomMosaic', 'LoadNiftiImageFromFile', 'LoadNiftiAnnotations', 
-    'LoadNiftiSliceImage', 'LoadNiftiSliceAnnotations', 'LoadBraTSSliceImage', 'LoadISICAnnotations'
+    'LoadNiftiSliceImage', 'LoadNiftiSliceAnnotations', 'LoadBraTSSliceImage', 'LoadISICAnnotations',
+    'LoadSynapseNPZ'
 ]
