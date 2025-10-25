@@ -1,59 +1,58 @@
-# segmentation/configs/denseclip_fpn_res50_512x512_80k_acdc_bg.py
 _base_ = [
     '_base_/models/denseclip_r50.py',
-    '_base_/datasets/acdc_B0.py',
+    '_base_/datasets/synapse_B0.py',        
     '_base_/default_runtime.py',
     '_base_/schedules/schedule_80k.py'
 ]
 
 custom_imports = dict(
     imports=[
-        'mmseg.datasets.acdcbg',
-        'mmseg.datasets.pipelines.load_nifti_annotation'
+        'mmseg.datasets.synapse',
+        'mmseg.datasets.pipelines.load_nifti_slice',
     ],
     allow_failed_imports=False
 )
 
-NUM_CLASSES = 4   # 배경 포함
+NUM_CLASSES = 14
 
 model = dict(
-    type='DenseCLIP_B0',
+    type='DenseCLIP',
     pretrained='segmentation/pretrained/RN50.pt',
     context_length=12,
     text_head=False,
-    
-    # ---- Teacher (DenseCLIP) ----
     backbone=dict(
         type='CLIPResNetWithAttention',
-        layers=[3,4,6,3],
+        layers=[3, 4, 6, 3],
         output_dim=1024,
         input_resolution=512,
-        style='pytorch'
-    ),
+        style='pytorch'),
     text_encoder=dict(
         type='CLIPTextContextEncoder',
-        context_length=16, embed_dim=1024,
-        transformer_width=512, transformer_heads=8,
-        transformer_layers=12, style='pytorch'
-    ),
-    # transformer decoder = Vision-guided Prompt Adapter(VPA)
+        context_length=16,
+        embed_dim=1024,
+        transformer_width=512,
+        transformer_heads=8,
+        transformer_layers=12,
+        style='pytorch'),
     context_decoder=dict(
         type='ContextDecoder',
-        transformer_width=256, transformer_heads=4,
-        transformer_layers=3, visual_dim=1024,
-        dropout=0.1, outdim=1024, style='pytorch'
-    ),
+        transformer_width=256,
+        transformer_heads=4,
+        transformer_layers=3,
+        visual_dim=1024,
+        dropout=0.1,
+        outdim=1024,
+        style='pytorch'),
     neck=dict(
         type='FPN',
-        in_channels=[256,512,1024,2048 + NUM_CLASSES],  # 2048+4
-        out_channels=256, num_outs=4
-    ),
+        in_channels=[256, 512, 1024, 2048 + NUM_CLASSES],  # 14 organs, background excluded
+        out_channels=256,
+        num_outs=4),
     decode_head=dict(
         type='FPNHead',
-        num_classes=NUM_CLASSES,
+        num_classes=NUM_CLASSES,   # 장기 14
         loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
     ),
-    
     # ---- B0 settings for freeze ----
     freeze_teacher=True,
     
@@ -98,7 +97,6 @@ model = dict(
 lr_config = dict(policy='poly', power=0.9, min_lr=1e-6, by_epoch=False,
                  warmup='linear', warmup_iters=1500, warmup_ratio=1e-6)
 
-
 # Optimizer: teacher는 lr=0(동결), 학생 경로만 학습
 optimizer = dict(
   type='AdamW', lr=1e-4, weight_decay=1e-4,
@@ -115,5 +113,5 @@ optimizer = dict(
 )
 
 data = dict(samples_per_gpu=4)
-evaluation = dict(metric=['mIoU','mDice'], ignore_index=0, classwise=True)
+evaluation = dict(metric=['mIoU', 'mDice'])
 device = 'cuda'

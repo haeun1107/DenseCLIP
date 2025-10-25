@@ -21,6 +21,7 @@ class ACDCBGDataset(CustomDataset):
 
     # 배경 포함 4클래스
     CLASSES = ['background', 'right ventricle cavity', 'myocardium', 'left ventricle cavity']
+    # CLASSES = ['background', 'heart MRI showing the right ventricle filled with dark blood', 'heart scan highlighting the thick muscular wall of ventricles', 'heart MRI showing the left ventricle where blood exits the heart']
     PALETTE = [
         [0, 0, 0],      # background
         [0, 0, 255],    # RV

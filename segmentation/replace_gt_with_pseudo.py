@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# replace_gt_with_pseudo_sim.py
+# replace (ACDC)
 import argparse, os, os.path as osp, shutil
 from collections import Counter
 

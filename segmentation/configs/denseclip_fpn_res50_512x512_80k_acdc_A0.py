@@ -19,7 +19,7 @@ NUM_CLASSES   = 4   # 배경 포함
 model = dict(
     type='DenseCLIP',
     pretrained='segmentation/pretrained/RN50.pt',
-    context_length=12,
+    context_length=16,
     text_head=False,
     backbone=dict(
         type='CLIPResNetWithAttention',
@@ -30,7 +30,7 @@ model = dict(
     ),
     text_encoder=dict(
         type='CLIPTextContextEncoder',
-        context_length=16, embed_dim=1024,
+        context_length=24, embed_dim=1024,
         transformer_width=512, transformer_heads=8,
         transformer_layers=12, style='pytorch'
     ),
