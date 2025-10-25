@@ -7,3 +7,4 @@ data
 *.pt
 vis*/
 vis_*/
+iter_metrics_percent_k.csv
