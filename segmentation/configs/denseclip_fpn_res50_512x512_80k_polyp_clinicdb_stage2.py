@@ -1,13 +1,13 @@
 _base_ = [
     '_base_/models/denseclip_r50.py',
-    '_base_/datasets/isic_A0.py',
+    '_base_/datasets/polyp_clinicdb_stage2.py',
     '_base_/default_runtime.py',
     '_base_/schedules/schedule_80k.py'
 ]
 
 custom_imports = dict(
     imports=[
-        'mmseg.datasets.isic',                       # Dataset class
+        'mmseg.datasets.polyp',                       # Dataset class
         'mmseg.datasets.pipelines.load_isic_annotation'  # Custom loader
     ],
     allow_failed_imports=False
@@ -63,12 +63,30 @@ model = dict(
 lr_config = dict(policy='poly', power=0.9, min_lr=1e-6, by_epoch=False,
                  warmup='linear', warmup_iters=1500, warmup_ratio=1e-6)
 
-optimizer = dict(type='AdamW', lr=1e-4, weight_decay=1e-4,
-    paramwise_cfg=dict(custom_keys={
-        'backbone': dict(lr_mult=0.1),
-        'text_encoder': dict(lr_mult=0.0),
-        'norm': dict(decay_mult=0.)
-    }))
+# optimizer = dict(type='AdamW', lr=1e-4, weight_decay=1e-4,
+#     paramwise_cfg=dict(custom_keys={
+#         'backbone': dict(lr_mult=0.1),
+#         'text_encoder': dict(lr_mult=0.0),
+#         'norm': dict(decay_mult=0.)
+#     }))
+
+optimizer = dict(
+    type='AdamW',
+    lr=1e-4,
+    weight_decay=1e-4,
+    paramwise_cfg=dict(
+        custom_keys={
+            'backbone':         dict(lr_mult=1.0),  # ✅ update (image encoder)
+            'text_encoder':     dict(lr_mult=0.0),  # ❌ freeze
+            'context_decoder':  dict(lr_mult=0.0),  # ❌ freeze
+            'neck':             dict(lr_mult=0.0),  # ❌ freeze (FPN)
+            'decode_head':      dict(lr_mult=0.0),  # ❌ freeze (Seg head)
+            'norm':             dict(decay_mult=0.) # norm no weight decay
+        }
+    )
+)
+
+load_from = '/home/haeun1107/decs_jupyter_lab/DenseCLIP/work_dirs/denseclip_fpn_res50_512x512_80k_polyp_clinicdb/iter_36000.pth'
 
 data = dict(samples_per_gpu=4)
 evaluation = dict(metric=['mIoU', 'mDice'])

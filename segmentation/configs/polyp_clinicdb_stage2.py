@@ -8,9 +8,22 @@ img_norm_cfg = dict(
 
 crop_size = (512, 512)
 
-train_pipeline = [
+train_pipeline_gt = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadISICAnnotations'),  # ← 커스텀 로더 사용 (0/255 -> 0/1)
+    dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
+    dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
+    dict(type='RandomFlip', prob=0.5),
+    dict(type='PhotoMetricDistortion'),
+    dict(type='Normalize', **img_norm_cfg),
+    dict(type='Pad', size=crop_size, pad_val=0, seg_pad_val=255),
+    dict(type='DefaultFormatBundle'),
+    dict(type='Collect', keys=['img', 'gt_semantic_seg']),
+]
+
+train_pipeline_pseudo = [
+    dict(type='LoadImageFromFile'),
+    dict(type='LoadISICAnnotations'),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -39,23 +52,34 @@ test_pipeline = [
 data = dict(
     samples_per_gpu=4,
     workers_per_gpu=4,
-
-    train=dict(
-        type=dataset_type,
-        data_root=data_root,
-        img_dir='images',
-        ann_dir='masks',
-        split='splits/train_10.txt', # Kvasir + clinicDB
-        img_suffix='.png',
-        seg_map_suffix='.png',
-        pipeline=train_pipeline),
-
+    train=[
+        dict(  # 10% GT
+            type=dataset_type,
+            data_root=data_root,
+            img_dir='images',
+            ann_dir='masks',
+            split='splits/train_clinicdb_10.txt',
+            img_suffix='.png',
+            seg_map_suffix='.png',
+            pipeline=train_pipeline_gt
+        ),
+        dict(  # 90% pseudo
+            type=dataset_type,
+            data_root=data_root,
+            img_dir='images',
+            ann_dir='pseudo',
+            split='splits/train_clinicdb_90.txt',
+            img_suffix='.png',
+            seg_map_suffix='.png',
+            pipeline=train_pipeline_pseudo
+        ),
+    ],
     val=dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='images',
         ann_dir='masks',
-        split='splits/test.txt', # validation은 kvasir + clinicdb로 테스트해서 best 뽑기
+        split='splits/test_clinicdb.txt',
         img_suffix='.png',
         seg_map_suffix='.png',
         pipeline=test_pipeline),
@@ -64,8 +88,8 @@ data = dict(
         type=dataset_type,
         data_root=data_root,
         img_dir='images',
-        ann_dir='masks',
-        split='splits/test_kvasir.txt', # 전부 하나씩 바꿔가며 테스트. test_kvasir.txt, test_clinicdb.txt, test_300.txt, test_etis.txt, test_colondb.txt
+        ann_dir='masks', 
+        split='splits/test_clinicdb.txt',
         img_suffix='.png',
         seg_map_suffix='.png',
         pipeline=test_pipeline),
