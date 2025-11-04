@@ -1,15 +1,15 @@
 # DenseCLIP/segmentation/configs/denseclip_fpn_res50_512x512_80k_btcv.py
 _base_ = [
     '_base_/models/denseclip_r50.py', 
-    '_base_/datasets/btcv.py',
+    '_base_/datasets/btcv_30.py',
     '_base_/default_runtime.py',
-    '_base_/schedules/schedule_80k.py'
+    '_base_/schedules/schedule_40k.py'
 ]
 
 custom_imports = dict(
     imports=[
-        'mmseg.datasets.btcv',                      # BTCVDataset 정의 파일
-        'mmseg.datasets.pipelines.load_npz_annotation'  # LoadNpzAnnotations (쓰고 있으면)
+        'mmseg.datasets.btcv',                    
+        'mmseg.datasets.pipelines.load_btcv_ann_A0' 
     ],
     allow_failed_imports=False
 )
@@ -47,16 +47,25 @@ model = dict(
 
     neck=dict(
         type='FPN',
-        in_channels=[256, 512, 1024, 2048 + 13], # BTCV Dataset classes 13 without background
+        in_channels=[256, 512, 1024, 2048 + 14],
         out_channels=256,
         num_outs=4),
 
     decode_head=dict(
         type='FPNHead',
-        num_classes=13, # BTCV Dataset classes 13 without background
+        num_classes=14,
         loss_decode=dict(
             type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
     ),
+
+    # DenseCLIP text prompt 14 classes
+    class_names=[
+        'background',
+        'spleen','kidney_right','kidney_left','gallbladder',
+        'esophagus','liver','stomach','aorta','inferior_vena_cava',
+        'portal_vein_and_splenic_vein','pancreas',
+        'adrenal_gland_right','adrenal_gland_left'
+    ],
 )
 
 lr_config = dict(policy='poly', power=0.9, min_lr=1e-6, by_epoch=False,

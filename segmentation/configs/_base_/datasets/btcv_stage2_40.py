@@ -2,16 +2,29 @@
 dataset_type = 'BTCVDataset'
 data_root='data/BTCV'
 
-img_norm_cfg = dict( # RGB 형식 (512, 512, 3)으로 저장되어 있으므로 이렇게 사용
+img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53],
     std=[58.395, 57.12, 57.375],
     to_rgb=True)
 
 crop_size = (512, 512)
 
-train_pipeline = [
+train_pipeline_gt = [
     dict(type='LoadImageFromFile'),
-    dict(type='LoadNpzAnnotations', reduce_zero_label=False),
+    dict(type='LoadNpzAnnotationsA0', reduce_zero_label=False),
+    dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
+    dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
+    dict(type='RandomFlip', prob=0.5),
+    dict(type='PhotoMetricDistortion'),
+    dict(type='Normalize', **img_norm_cfg),
+    dict(type='Pad', size=crop_size, pad_val=0, seg_pad_val=255),
+    dict(type='DefaultFormatBundle'),
+    dict(type='Collect', keys=['img', 'gt_semantic_seg']),
+]
+
+train_pipeline_pseudo = [
+    dict(type='LoadImageFromFile'),
+    dict(type='LoadNpzAnnotationsB0'),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -24,7 +37,6 @@ train_pipeline = [
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    # dict(type='LoadNpzAnnotations'),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(512, 512),
@@ -38,35 +50,51 @@ test_pipeline = [
         ])
 ]
 
-
 data = dict(
     samples_per_gpu=4,
     workers_per_gpu=4,
-    train=dict(
-        type=dataset_type,
-        data_root=data_root,
-        img_dir='image/x',
-        ann_dir='label',
-        split='train.txt',
-        img_suffix='.png',
-        seg_map_suffix='.npz',
-        pipeline=train_pipeline),
+    train=[
+        dict(  # 40% GT
+            type=dataset_type,
+            data_root=data_root,
+            img_dir='image',
+            ann_dir='label',
+            split='train_40.txt',
+            img_suffix='.png',
+            seg_map_suffix='.npz',
+            pipeline=train_pipeline_gt
+        ),
+        dict(  # 60% pseudo
+            type=dataset_type,
+            data_root=data_root,
+            img_dir='image',
+            ann_dir='pseudo_60', # modified for the pseudo label
+            split='train_60.txt',
+            img_suffix='.png',
+            seg_map_suffix='.npz',
+            pipeline=train_pipeline_pseudo
+        ),
+    ],
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='image/x',
+        img_dir='image',
         ann_dir='label',
         split='val.txt',
         img_suffix='.png',
         seg_map_suffix='.npz',
-        pipeline=test_pipeline),
+        ignore_index=0,
+        pipeline=test_pipeline
+    ),
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='image/x',
+        img_dir='image',
         ann_dir='label',
         split='val.txt',
         img_suffix='.png',
         seg_map_suffix='.npz',
-        pipeline=test_pipeline),
+        ignore_index=0,
+        pipeline=test_pipeline
+    ),
 )

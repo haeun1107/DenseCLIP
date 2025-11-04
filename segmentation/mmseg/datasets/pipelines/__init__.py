@@ -13,6 +13,8 @@ from .load_nifti_slice import LoadNiftiSliceImage, LoadNiftiSliceAnnotations
 from .load_brats_slice import LoadBraTSSliceImage, LoadBraTSSliceAnnotations
 from .load_isic_annotation import LoadISICAnnotations
 from .load_synapse_npz import LoadSynapseNPZ
+from .load_btcv_ann_A0 import LoadNpzAnnotationsA0
+from .load_btcv_ann_B0 import LoadNpzAnnotationsB0
 
 __all__ = [
     'Compose', 'to_tensor', 'ToTensor', 'ImageToTensor', 'ToDataContainer',
@@ -22,5 +24,5 @@ __all__ = [
     'AdjustGamma', 'CLAHE', 'Rerange', 'RGB2Gray', 'RandomCutOut',
     'RandomMosaic', 'LoadNiftiImageFromFile', 'LoadNiftiAnnotations', 
     'LoadNiftiSliceImage', 'LoadNiftiSliceAnnotations', 'LoadBraTSSliceImage', 'LoadISICAnnotations',
-    'LoadSynapseNPZ'
+    'LoadSynapseNPZ', 'LoadNpzAnnotationsA0', 'LoadNpzAnnotationsB0'
 ]

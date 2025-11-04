@@ -11,7 +11,7 @@ crop_size = (512, 512)
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='LoadNpzAnnotations', reduce_zero_label=False),
+    dict(type='LoadNpzAnnotationsA0', reduce_zero_label=False),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -37,35 +37,39 @@ test_pipeline = [
         ])
 ]
 
-
 data = dict(
     samples_per_gpu=4,
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='image/x',
+        img_dir='image',
         ann_dir='label',
-        split='train_10.txt',
+        split='train_30.txt',
         img_suffix='.png',
         seg_map_suffix='.npz',
-        pipeline=train_pipeline),
+        pipeline=train_pipeline
+    ),
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='image/x',
+        img_dir='image',
         ann_dir='label',
         split='val.txt',
         img_suffix='.png',
         seg_map_suffix='.npz',
-        pipeline=test_pipeline),
+        ignore_index=0,
+        pipeline=test_pipeline
+    ),
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='image/x',
+        img_dir='image',
         ann_dir='label',
         split='val.txt',
         img_suffix='.png',
         seg_map_suffix='.npz',
-        pipeline=test_pipeline),
+        ignore_index=0,
+        pipeline=test_pipeline
+    ),
 )

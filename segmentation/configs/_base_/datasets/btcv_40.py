@@ -1,14 +1,17 @@
-dataset_type = 'SynapseNPZDataset'
-data_root = 'data/Synapse'
+# DenseCLIP/segmentation/configs/_base_/datasets/btcv.py
+dataset_type = 'BTCVDataset'
+data_root='data/BTCV'
 
-img_norm_cfg = dict(mean=[123.675, 116.28, 103.53],
-                    std=[58.395, 57.12, 57.375],
-                    to_rgb=True)
+img_norm_cfg = dict(
+    mean=[123.675, 116.28, 103.53],
+    std=[58.395, 57.12, 57.375],
+    to_rgb=True)
 
 crop_size = (512, 512)
 
 train_pipeline = [
-    dict(type='LoadSynapseNPZ', with_label=True),     # 새 로더
+    dict(type='LoadImageFromFile'),
+    dict(type='LoadNpzAnnotationsA0', reduce_zero_label=False),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
@@ -20,7 +23,7 @@ train_pipeline = [
 ]
 
 test_pipeline = [
-    dict(type='LoadSynapseNPZ'),                  # 새 로더
+    dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(512, 512),
@@ -37,35 +40,35 @@ test_pipeline = [
 data = dict(
     samples_per_gpu=4,
     workers_per_gpu=4,
-
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='train_npz',   # 절대경로 허용
-        ann_dir=None,
-        split='splits_fixed/train_10.txt',
-        img_suffix='.npz',
+        img_dir='image',
+        ann_dir='label',
+        split='train_40.txt',
+        img_suffix='.png',
+        seg_map_suffix='.npz',
         pipeline=train_pipeline
     ),
-
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='test_npz',
-        ann_dir=None,
-        split='splits_fixed/test.txt',
-        img_suffix='.npz',
+        img_dir='image',
+        ann_dir='label',
+        split='val.txt',
+        img_suffix='.png',
+        seg_map_suffix='.npz',
         ignore_index=0,
         pipeline=test_pipeline
     ),
-
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='test_npz',
-        ann_dir=None,
-        split='splits_fixed/test.txt',
-        img_suffix='.npz',
+        img_dir='image',
+        ann_dir='label',
+        split='val.txt',
+        img_suffix='.png',
+        seg_map_suffix='.npz',
         ignore_index=0,
         pipeline=test_pipeline
     ),
