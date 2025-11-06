@@ -7,14 +7,17 @@ Generate PNG pseudo segmentation masks from a DenseCLIP A0 checkpoint on ISIC-st
   e.g., data/ISIC/ISIC2018_Task1_Training_Input/ISIC_000007.jpg
      -> out_dir/ISIC2018_Task1_Training_Input/ISIC_000007_segmentation.png
 
-Supports confidence thresholding:
-  --threshold 0.5 --bg-index 0
-will set any pixel whose max-class confidence < 0.5 to background (class 0).
+Label convention for TRAINING (default, no --vis-binary):
+  - 0   : background
+  - 1   : lesion
+  - 255 : ignore  (confidence < threshold, if confidence is available)
 
-Default assumes ISIC 2018 Task1 (binary: background=0, lesion=1) and can write:
-  - raw class ids 0..C-1 as 8-bit PNG
-  - or binary mask {0,255} if --binary is given.
+If you pass --vis-binary, it is ONLY for visualization:
+  - 0   -> 0   (black, background)
+  - 1   -> 255 (white, lesion)
+  - 255 -> 128 (gray, ignore)
 """
+
 import argparse
 import os
 import os.path as osp
@@ -28,26 +31,30 @@ from mmseg.models import build_segmentor
 from mmseg.apis import single_gpu_test
 import denseclip  # noqa  (register DenseCLIP)
 
+IGNORE_INDEX = 255
+
 
 def parse_args():
-    p = argparse.ArgumentParser("DenseCLIP A0 → PNG pseudo mask writer (ISIC) w/ threshold")
+    p = argparse.ArgumentParser("DenseCLIP A0 → PNG pseudo mask writer (ISIC, 0/1/255 + ignore)")
     p.add_argument('config', help='config .py (ISIC dataset test cfg)')
     p.add_argument('checkpoint', help='A0 checkpoint .pth')
     p.add_argument('--out-dir', required=True, help='root dir to save PNG masks')
     p.add_argument('--suffix', default='_segmentation.png',
                    help="output filename suffix (default: '_segmentation.png')")
-    p.add_argument('--binary', action='store_true',
-                   help='Map class {0,1} → {0,255} and save 8-bit PNG (ISIC Task1).')
     p.add_argument('--class-names', nargs='*', default=None,
                    help="Optional override for model.class_names (e.g., background lesion)")
     p.add_argument('--workers', type=int, default=None,
                    help='dataloader workers; default from cfg')
 
-    # confidence gating
-    p.add_argument('--threshold', type=float, default=0.5,
-                   help='pixels with max prob < threshold become bg-index (default: 0.5)')
-    p.add_argument('--bg-index', type=int, default=0,
-                   help='Background class index to assign to low-confidence pixels (default: 0).')
+    # confidence gating → low-conf 픽셀을 ignore(255)로 보냄 (scores 있을 때만 의미 있음)
+    p.add_argument('--threshold', type=float, default=None,
+                   help='if per-pixel scores are available, pixels with max prob < threshold '
+                        'become ignore (255). If the model only outputs label maps, this is ignored.')
+
+    # 시각화용 옵션 (학습에는 사용하지 말 것)
+    p.add_argument('--vis-binary', action='store_true',
+                   help='Save masks as 0(bg), 255(lesion), 128(ignore) for visualization only. '
+                        'For training, do NOT use this flag (raw 0/1/255 is better).')
 
     return p.parse_args()
 
@@ -61,9 +68,10 @@ def _compute_label_and_conf(pred):
     """
     pred can be:
       - (H, W) int map          -> label only, no confidence
-      - (C, H, W) score/prob    -> compute argmax + confidence
-      - (H, W, C) score/prob    -> same, but channel-last
+      - (C, H, W) score/logit   -> argmax + confidence from softmax
+      - (H, W, C) score/logit   -> same, but channel-last
       - tuple/dict wrappers     -> unwrap common keys
+
     Returns:
       label2d: (H, W) int32
       conf2d:  (H, W) float32 or None if we couldn't infer confidence
@@ -72,7 +80,7 @@ def _compute_label_and_conf(pred):
     if isinstance(pred, tuple) and len(pred):
         pred = pred[0]
     if isinstance(pred, dict):
-        for k in ('seg_pred', 'sem_seg', 'pred', 'segmentation'):
+        for k in ('seg_pred', 'sem_seg', 'pred', 'segmentation', 'logits'):
             if k in pred:
                 pred = pred[k]
                 break
@@ -85,7 +93,7 @@ def _compute_label_and_conf(pred):
         conf2d = None  # we don't know per-pixel confidence here
         return label2d, conf2d
 
-    # Case 2: (C,H,W) or (H,W,C) scores
+    # Case 2: (C,H,W) or (H,W,C) scores / logits
     if a.ndim == 3:
         # Heuristic: if first dim looks like #classes
         if a.shape[0] < a.shape[-1] and a.shape[0] <= 512:
@@ -120,32 +128,28 @@ def _compute_label_and_conf(pred):
     return label2d, conf2d
 
 
-# def _apply_threshold(label2d, conf2d, threshold, bg_index):
-#     """
-#     If threshold is not None and we have conf2d,
-#     any pixel with conf < threshold becomes bg_index.
-#     """
-#     if threshold is None:
-#         return label2d
-#     if conf2d is None:
-#         # no confidence information -> nothing to apply
-#         return label2d
+def _apply_threshold(label2d, conf2d, threshold, ignore_index=IGNORE_INDEX, warn_state=None):
+    """
+    If threshold is not None and we have conf2d,
+    any pixel with conf < threshold becomes ignore_index (e.g., 255).
 
-#     out = label2d.copy()
-#     low_conf_mask = conf2d < threshold
-#     out[low_conf_mask] = bg_index
-#     return out
-
-def _apply_threshold(label2d, conf2d, threshold, bg_index):
+    If the model only outputs label maps (conf2d is None),
+    threshold is ignored, with a one-time warning.
+    """
     if threshold is None:
-        return label2d
+        return label2d, warn_state
     if conf2d is None:
-        return label2d
+        if warn_state is not None and not warn_state.get('no_conf_warned', False):
+            print("[WARN] --threshold is set but no confidence map available; threshold is ignored "
+                  "(model seems to output only label maps).")
+            warn_state['no_conf_warned'] = True
+        return label2d, warn_state
 
     out = label2d.copy()
     low_conf_mask = conf2d < threshold
-    out[low_conf_mask] = 255        # 👈 confidence 낮은 픽셀은 무시(index=255)
-    return out
+    out[low_conf_mask] = ignore_index
+    return out, warn_state
+
 
 def _rel_img_path(dataset, idx):
     """Return image relative path used by dataset (with extension)."""
@@ -212,17 +216,23 @@ def main():
     results = single_gpu_test(model, data_loader, show=False)
 
     saved = 0
+    warn_state = {'no_conf_warned': False}
+    global_unique_vals = set()
+
     for i, pred in enumerate(results):
-        # 1) get label + confidence
+        # 1) get label + confidence (if any)
         label2d, conf2d = _compute_label_and_conf(pred)
 
-        # 2) apply threshold: low-conf → bg_index
-        label2d_thr = _apply_threshold(
+        # 2) apply threshold: low-conf → ignore_index(255) (if conf2d exists)
+        label2d_thr, warn_state = _apply_threshold(
             label2d,
             conf2d,
             threshold=args.threshold,
-            bg_index=args.bg_index
+            ignore_index=IGNORE_INDEX,
+            warn_state=warn_state
         )
+
+        global_unique_vals.update(np.unique(label2d_thr).tolist())
 
         # 3) resolve output path
         rel = _rel_img_path(dataset, i)
@@ -230,27 +240,37 @@ def main():
         _ensure_dir(osp.dirname(out_path))
 
         # 4) write PNG
-        if args.binary:
-            # binary mask → {0,255}
-            img = (label2d_thr > 0).astype(np.uint8) * 255
-            mmcv.imwrite(img, out_path)
+        if args.vis_binary:
+            # ✅ VIS ONLY: 0(bg), 255(lesion), 128(ignore)
+            img_vis = np.zeros_like(label2d_thr, dtype=np.uint8)
+            img_vis[label2d_thr == 1] = 255          # lesion → white
+            img_vis[label2d_thr == IGNORE_INDEX] = 128  # ignore → gray
+            mmcv.imwrite(img_vis, out_path)
         else:
-            # raw class ids 0..C-1 (0 == background)
-            img = label2d_thr.astype(np.uint8)
-            mmcv.imwrite(img, out_path)
+            # ✅ TRAINING PSEUDO: 0/1/255 그대로 저장
+            img_raw = label2d_thr.astype(np.uint8)
+            mmcv.imwrite(img_raw, out_path)
 
         saved += 1
 
     print(f"[PNG] Saved {saved} masks → {osp.abspath(args.out_dir)}")
+    print(f"[INFO] Raw label values present: {sorted(global_unique_vals)}")
+    if not args.vis_binary:
+        print(" [INFO] Saved raw labels with values like {0,1,255}. "
+              "For training, use ignore_index=255 in loss & dataset "
+              "to ignore low-confidence pixels. "
+              "If images look all-black in a viewer, that's expected "
+              "because values are 0/1; use --vis-binary only for visualization.")
 
 
 if __name__ == '__main__':
     main()
 
+
+
 # python segmentation/generate_png_isic.py \
 #   segmentation/configs/denseclip_fpn_res50_512x512_40k_isic_30.py \
 #   work_dirs/denseclip_fpn_res50_512x512_40k_isic_30/iter_40000.pth \
 #   --out-dir data/ISIC/pseudo_70_0.7 \
-#   --threshold 0.7 \
-#   --bg-index 0 \
-#   --binary   
+#   --threshold 0.7
+#   --vis-binary

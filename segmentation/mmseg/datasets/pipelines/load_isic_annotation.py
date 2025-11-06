@@ -6,7 +6,14 @@ from ..builder import PIPELINES
 
 @PIPELINES.register_module()
 class LoadISICAnnotations(object):
-    """Load ISIC Task1 PNG masks and binarize them to {0,1}."""
+    """Load ISIC Task1 PNG masks.
+
+    - Original ISIC GT (0/255)  : 0 -> background, 255 -> lesion(1)
+    - Pseudo with ignore (0/1/255):
+        0   -> background
+        1   -> lesion
+        255 -> ignore (kept as 255)
+    """
     def __init__(self,
                  file_client_args=dict(backend='disk'),
                  imdecode_backend='pillow',
@@ -38,15 +45,36 @@ class LoadISICAnnotations(object):
             filename = results['ann']['seg_map']
 
         img_bytes = self.file_client.get(filename)
-        mask = mmcv.imfrombytes(img_bytes, flag='unchanged',
-                                backend=self.imdecode_backend).squeeze()
+        mask = mmcv.imfrombytes(
+            img_bytes, flag='unchanged',
+            backend=self.imdecode_backend).squeeze()
 
         # 다채널이면 첫 채널만
         if mask.ndim == 3:
             mask = mask[..., 0]
 
-        # 이진화: >0 -> 1
-        mask = (mask > 0).astype(np.uint8)
+        mask = mask.astype(np.int64)
+        unique_vals = np.unique(mask)
+        ignore_index = 255
+
+        # Case 1: 순수 0/255 바이너리 (ISIC 오리지널 GT)
+        if set(unique_vals).issubset({0, 255}):
+            # 0: background, 255: lesion -> 1
+            mask = (mask > 0).astype(np.int64)
+
+        # Case 2: 255를 ignore로 사용하는 pseudo (0/1/255)
+        elif ignore_index in unique_vals:
+            out = np.zeros_like(mask, dtype=np.int64)
+            lesion_mask = (mask > 0) & (mask != ignore_index)
+            out[lesion_mask] = 1
+            out[mask == ignore_index] = ignore_index  # 255 유지
+            mask = out
+
+        # Case 3: 기타 값들 → 안전하게 >0 -> 1
+        else:
+            tmp = np.zeros_like(mask, dtype=np.int64)
+            tmp[mask > 0] = 1
+            mask = tmp
 
         # (옵션) reduce_zero_label
         if self.reduce_zero_label:
@@ -59,7 +87,7 @@ class LoadISICAnnotations(object):
             for cid in self.suppress_labels:
                 mask[mask == cid] = -1
 
-        results['gt_semantic_seg'] = mask.astype(np.int64)
+        results['gt_semantic_seg'] = mask
         results['seg_fields'].append('gt_semantic_seg')
         return results
 
